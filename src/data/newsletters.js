@@ -1,9 +1,6 @@
-// Newsletter Library - Basado en los newsletters reales recopilados en Notion
-// Fuentes: Nudista Inversor, Invierte Joven, Omar Lopez BTC, Movidas de Emprender,
-// Emprende Aprendiendo, Libro al Dia, Crypto Noticias, Bigseo, Zumitow,
-// Javi Rueda, Rafa Caston, Aura Pods, Eladio Mendoza, Dinero y Bolsa,
-// Bootstraping, Javi Ortega, Galician Investor, Anyelo Rico, Autonomos,
-// Adria Lopez Pastor, Celia Rubio, Animation Magazine
+// Newsletter Library — Contenido REAL extraído de tus apuntes de Notion
+// Fuente: https://www.notion.so/Apuntes-de-newsletters-48dc7ddc8baa486f8a9e4043f9b3ee91
+// Cada artículo refleja fielmente lo que apuntaste de cada newsletter
 
 export const CATEGORIES = {
   INVERSION: {
@@ -29,7 +26,7 @@ export const CATEGORIES = {
   },
   MARKETING: {
     id: 'marketing',
-    name: 'Marketing & SEO',
+    name: 'Marketing & Contenido',
     emoji: '📣',
     color: '#EF4444',
     description: 'Crece online',
@@ -50,14 +47,14 @@ export const CATEGORIES = {
   },
   AUTONOMO: {
     id: 'autonomo',
-    name: 'Autónomo & Freelance',
+    name: 'Negocio & Liderazgo',
     emoji: '💼',
     color: '#EC4899',
-    description: 'Trabaja para ti mismo',
+    description: 'Dirige tu propio camino',
   },
   CREACION: {
     id: 'creacion',
-    name: 'Creación de Contenido',
+    name: 'Creación & Contenido',
     emoji: '🎨',
     color: '#F97316',
     description: 'Construye tu audiencia',
@@ -65,679 +62,755 @@ export const CATEGORIES = {
 };
 
 export const NEWSLETTERS = [
-  // ─── INVERSIÓN ────────────────────────────────────────────────────────────────
+  // ─── NUDISTA INVERSOR ─────────────────────────────────────────────────────────
   {
     id: 'nl_001',
-    title: 'El Nudista Inversor: Invierte sin complicaciones',
+    title: 'No te harás rico ahorrando — hay que ganar más',
     source: 'Nudista Inversor',
     category: 'inversion',
     difficulty: 'easy',
     xpReward: 120,
     readTime: 4,
-    tags: ['indexados', 'largo-plazo', 'simplicidad'],
+    tags: ['ingresos', 'marca-personal', 'libertad-financiera'],
     summary:
-      'La filosofía del Nudista Inversor: invertir sin capas innecesarias. Fondos indexados, automatización y no mirar la cartera cada día. La inversión simple gana a la inversión compleja.',
+      'Por más que ahorres en gastos hormiga y vivas por debajo de tus posibilidades, el ahorro es mínimo. Tampoco ayuda mucho invertir ese poco dinero porque el mercado cambia. Lo mejor que puedes hacer para generar más ingresos es simplemente ganar más.',
     keyInsight:
-      'El 90% de los gestores activos no baten al índice en el largo plazo. ¿Por qué pagar más por peores resultados? Un fondo indexado + consistencia = resultado superior.',
+      'Ser rico no es yates y mansiones. Ser rico es poder eliminar las cosas que no necesitas. La libertad financiera consiste en tener tiempo para realizar tus proyectos y presupuesto para crear nuevos.',
     howToApply: [
-      'Abre una cuenta en MyInvestor, Indexa Capital o similar y elige un fondo indexado mundial (MSCI World)',
-      'Configura una aportación automática mensual aunque sea de 50€. La constancia es el secreto.',
-      'NO mires tu cartera cada día. Configúrala y olvídate meses.',
-      'Reinvierte los dividendos automáticamente para aprovechar el interés compuesto',
+      'Estudia más para mejorar tus habilidades en tu campo profesional',
+      'Dedícale el tiempo necesario para mejorar tu marca personal',
+      'Mejora tu comunicación y aprende a hablar con clientes',
+      'Una vez hayas mejorado, crea cursos o genera ingresos pasivos con tus redes sociales',
     ],
     dailyApplication:
-      'Hoy calcula cuánto podrías invertir mensualmente si recortaras 1 gasto innecesario. Aunque sean 30€.',
+      'Hoy pregúntate: ¿Qué habilidad específica, si la mejorara, me permitiría cobrar un 20% más? Escríbela y busca cómo desarrollarla esta semana.',
     personalExample:
-      'Invertir 200€/mes durante 30 años al 7% anual = +226.000€. No necesitas ser experto. Solo necesitas empezar y no parar.',
+      'Diversifica, haz de todo para ganar más dinero. Busca una vía más fácil y rápida para conseguirlo joven, pero con sus matices. No pienses que la vía es solo trabajar y ahorrar hasta viejo.',
     challenge: {
-      title: 'Calcula tu número de FIRE',
-      description: 'Calcula cuánto dinero necesitas para ser independiente financieramente (gastos anuales × 25).',
-      xp: 150,
+      title: 'Define tu Plan para Ganar Más',
+      description: 'Escribe 3 habilidades que mejorarías para aumentar tus ingresos. Para cada una, anota 1 acción concreta que puedes tomar esta semana.',
+      xp: 130,
       duration: 'today',
     },
   },
   {
     id: 'nl_002',
-    title: 'Invierte Joven: El tiempo es tu mayor activo',
+    title: 'Las 5 claves de un negocio online escalable',
+    source: 'Nudista Inversor',
+    category: 'emprendimiento',
+    difficulty: 'medium',
+    xpReward: 150,
+    readTime: 5,
+    tags: ['negocio-online', 'escalabilidad', 'independencia'],
+    summary:
+      'Para un negocio online que funcione de verdad necesitas 5 cosas: que sea una necesidad real del mercado (no tuya), que tengas una barrera de entrada, que sea controlable por ti, escalable, y que no dependa de tu tiempo.',
+    keyInsight:
+      '"¿Tu hábitat empresarial es tu barrio o el mundo?" El mundo online te hace un privilegiado del mundo moderno. Cualquier cosa que empieces como proyecto paralelo puede llegar a ser un negocio.',
+    howToApply: [
+      '✋ Barrera de entrada: cuando entres, los demás no tendrán lo que tú tienes (dinero, conocimiento)',
+      '📊 Controlable: que tus decisiones lo hagan más rentable, sin depender solo de Google o Amazon',
+      '📈 Escalable: crece con el tiempo tanto en personal como económicamente',
+      '🕐 Tiempo: un negocio debe funcionar solo, no depender de ti constantemente',
+    ],
+    dailyApplication:
+      'Evalúa tu idea o negocio actual con estas 5 claves. ¿Cuántas cumples? ¿En cuál fallas más?',
+    personalExample:
+      '"¿Pueden incrementar los ingresos de tu negocio de forma ilimitada o hay un límite?" Si es online y ya grabado, es ilimitado. Vuélvete un pescador, no un cazador.',
+    challenge: {
+      title: 'Auditoría de tu Negocio con las 5 Claves',
+      description: 'Puntúa tu negocio/idea del 1 al 5 en cada clave (necesidad, barrera, controlable, escalable, tiempo). Total máximo: 25 puntos.',
+      xp: 140,
+      duration: 'today',
+    },
+  },
+
+  // ─── INVIERTE JOVEN ───────────────────────────────────────────────────────────
+  {
+    id: 'nl_003',
+    title: 'Los errores más comunes al invertir en bolsa',
     source: 'Invierte Joven',
     category: 'inversion',
     difficulty: 'easy',
     xpReward: 110,
     readTime: 3,
-    tags: ['jóvenes', 'interés-compuesto', 'etfs'],
+    tags: ['bolsa', 'errores', 'largo-plazo'],
     summary:
-      'Empezar a invertir a los 25 vs a los 35 puede significar el doble de patrimonio final con las mismas aportaciones. La ventaja del joven inversor no es el dinero, es el tiempo.',
+      'Dos errores críticos al invertir: invertir todo de golpe (es mejor poco a poco porque puede que la bolsa baje) y vender cuando la bolsa cae. "No pierdes hasta que no vendas" — cuando baja, sigue siendo tuyo, igual que una casa.',
     keyInsight:
-      'El interés compuesto necesita tiempo para funcionar. Cada año que esperas es exponencialmente más caro que el anterior. Empezar con poco, hoy, vale más que empezar con mucho, mañana.',
+      '"El largo plazo es como un telescopio: quizás lo estiras un poco y no se ve nada diferente, pero si miras por el agujero verás lo lejos que llega." Toda pequeña acción de hoy está construyendo tu futuro.',
     howToApply: [
-      'Abre una cuenta broker hoy (DEGIRO, Interactive Brokers, Trade Republic son opciones low-cost)',
-      'Empieza con ETFs simples: uno de mundo desarrollado + uno de emergentes',
-      'Define un porcentaje fijo de tu sueldo para invertir antes de gastar (mínimo 10%)',
-      'Ignora las noticias del mercado. Tu horizonte es décadas, no días.',
+      'Invierte poco a poco cada mes (DCA) en vez de todo de golpe',
+      'Cuando la bolsa baje, NO vendas. Sigue siendo tuyo. Solo pierdes si vendes.',
+      'Piensa en años y décadas, no en semanas. Cambia el chip del corto plazo.',
+      'Aprende de alguien que lleve más tiempo que tú pero que esté 2-3 pasos más, tienen ideas más frescas',
     ],
     dailyApplication:
-      'Busca en tu banco cuánto llevas ahorrado sin invertir y calcula cuánto habrías ganado si lo hubieras puesto en un indexado hace 3 años.',
+      'Revisa si tienes alguna inversión en rojo. Recuerda: todavía no has perdido nada si no vendes. ¿Hay razón real para vender o es miedo emocional?',
     personalExample:
-      'A los 25 años invirtiendo 150€/mes: a los 55 tienes ~170.000€. Si empiezas a los 35 con lo mismo: ~85.000€. Los primeros 10 años valen lo mismo que los siguientes 20.',
+      'Lo mejor que puedes hacer al invertir es observar a los grandes, dónde mueven su dinero (no cuánto gastan) e ir más rápido y seguro para ahorrarte tiempo de investigación.',
     challenge: {
-      title: 'Primera Inversión Real',
-      description: 'Abre una cuenta broker gratuita y haz tu primera compra aunque sea de 10€.',
-      xp: 300,
-      duration: 'this-week',
+      title: 'Plan de Inversión Mensual',
+      description: 'Define HOY cuánto vas a invertir cada mes (aunque sean 50€) y qué día automatizarás la transferencia. Escríbelo como compromiso.',
+      xp: 150,
+      duration: 'today',
     },
   },
   {
-    id: 'nl_003',
-    title: 'Galician Investor: Value Investing en español',
-    source: 'Galician Investor',
+    id: 'nl_004',
+    title: 'Cómo invertir según lo que puedes ahorrar cada mes',
+    source: 'Invierte Joven',
     category: 'inversion',
-    difficulty: 'hard',
-    xpReward: 180,
-    readTime: 7,
-    tags: ['value-investing', 'análisis', 'empresas'],
+    difficulty: 'medium',
+    xpReward: 170,
+    readTime: 6,
+    tags: ['indexados', 'etfs', 'bitcoin', 'estrategia'],
     summary:
-      'El value investing consiste en comprar empresas por debajo de su valor intrínseco y esperar a que el mercado las reconozca. No es timing, es paciencia y análisis.',
+      'Estrategia concreta según tu capacidad de ahorro: 100€/mes → fondo indexado simple automatizado. 500€/mes → añade emergentes (20%) y Bitcoin (10-20%). +1000€/mes → suma dividendos o crowdlending. La base siempre es la misma.',
     keyInsight:
-      'Warren Buffett dijo: "El mercado es una máquina de transferir dinero de los impacientes a los pacientes." Comprar miedo, vender euforia.',
+      '"Si ahorras 500€/mes a 20 años puedes plantarte con +300.000€. Nada mal." La estrategia óptima: 80-90% en indexados, 10-20% en Bitcoin, automatizado cada mes y sin mirar constantemente.',
     howToApply: [
-      'Lee los balances anuales de empresas que entiendes y usas en tu vida cotidiana',
-      'Calcula el PER (precio/beneficios) y compáralo con el histórico del sector',
-      'Busca empresas con ventajas competitivas duraderas (moat): marca, patentes, costes de cambio',
-      'Crea una lista de empresas a vigilar y espera a comprar en correcciones del mercado',
+      '100€/mes: Fidelity MSCI World o MyInvestor S&P500. Automático el día 5 del mes. Olvidarse.',
+      '500€/mes: 80% desarrollados + 20% emergentes (Vanguard Emerging Markets) + algo de BTC',
+      '+1000€/mes: añade dividendos (JGPI, VHYL) o acciones individuales (máx 20% cartera)',
+      'Regla del 4%: cuando vivas de inversiones, retira máximo un 4% anual',
     ],
     dailyApplication:
-      'Elige una empresa que uses cada día (una app, una tienda, un producto) y busca si cotiza en bolsa. Lee su último informe anual.',
+      'Calcula en qué nivel de ahorro estás ahora mismo. ¿Sigues la estrategia correspondiente a tu nivel? ¿Qué ajuste deberías hacer?',
     personalExample:
-      'Si entiendes cómo gana dinero una empresa mejor que el mercado, tienes ventaja. El análisis fundamental te da convicción para mantener en caídas.',
+      'Yo invertiría: 80-90% en fondos indexados (MyInvestor o Finizens) + 10-20% en Bitcoin (Bit2Me). Todos los meses durante años, sin importar el precio.',
     challenge: {
-      title: 'Análisis de una Empresa',
-      description: 'Elige una empresa que conozcas y analiza: ¿A qué precio te parecería barata?',
+      title: 'Configura tu Cartera Base',
+      description: 'Abre o revisa tu cuenta de MyInvestor/Trade Republic. Configura las aportaciones automáticas según el nivel que te corresponde.',
       xp: 200,
       duration: 'this-week',
     },
   },
   {
-    id: 'nl_004',
-    title: 'Dinero y Bolsa: Gestión del riesgo primero',
-    source: 'Dinero y Bolsa',
-    category: 'inversion',
-    difficulty: 'medium',
-    xpReward: 140,
-    readTime: 5,
-    tags: ['riesgo', 'diversificación', 'cartera'],
-    summary:
-      'Antes de pensar en rentabilidad, piensa en riesgo. Una cartera bien diversificada reduce volatilidad sin sacrificar retorno. La regla: no pongas todos los huevos en la misma cesta.',
-    keyInsight:
-      'No ganar un 10% extra duele menos que perder un 50%. Las pérdidas grandes destruyen el interés compuesto: una caída del 50% requiere un +100% para recuperarse.',
-    howToApply: [
-      'Divide tu cartera por tipos de activo: RV (acciones), RF (bonos), liquidez',
-      'Dentro de RV: diversifica por geografía, sector y divisa',
-      'Nunca inviertas dinero que puedas necesitar en menos de 5 años',
-      'Rebalancea tu cartera 1-2 veces al año para mantener los porcentajes objetivo',
-    ],
-    dailyApplication:
-      'Revisa si tienes dinero concentrado en una sola empresa, sector o país. La concentración es el mayor riesgo para el inversor amateur.',
-    personalExample:
-      'Si el 80% de tu cartera es una sola acción "segura" y cae un 60% (pasa), tu portafolio total cae un 48%. Diversificar no es cobardía, es inteligencia.',
-    challenge: {
-      title: 'Auditoría de Cartera',
-      description: 'Revisa tu distribución actual de activos y calcula el % en cada categoría.',
-      xp: 130,
-      duration: 'today',
-    },
-  },
-
-  // ─── CRYPTO ───────────────────────────────────────────────────────────────────
-  {
     id: 'nl_005',
-    title: 'Omar Lopez BTC: Por qué Bitcoin es diferente',
-    source: 'Omar Lopez BTC',
-    category: 'crypto',
-    difficulty: 'medium',
-    xpReward: 150,
+    title: '14 consejos financieros para tu yo más joven',
+    source: 'Invierte Joven',
+    category: 'inversion',
+    difficulty: 'easy',
+    xpReward: 130,
     readTime: 5,
-    tags: ['bitcoin', 'escasez', 'store-of-value'],
+    tags: ['consejos', 'mentalidad', 'carrera'],
     summary:
-      'Bitcoin tiene una oferta fija de 21 millones de monedas. Ningún gobierno, empresa ni persona puede cambiarlo. Esta escasez programada lo convierte en el activo más duro jamás creado.',
+      'Conecta tus fortalezas con el campo profesional mejor pagado. Cambia de empresa cada 2-3 años para crecer un mínimo del 20%. Di "sí" a todo cuando empiezas. Inicia al menos 3 proyectos paralelos. Invierte el 40%+ de tus ingresos.',
     keyInsight:
-      'El oro lleva 5.000 años siendo escaso porque es difícil de minar. Bitcoin lleva 15 años siendo escaso porque es matemáticamente imposible crear más de 21M. La diferencia: Bitcoin es verificable en segundos.',
+      '"Las personas más ricas inician sus propias empresas. Es muy difícil ser rico con un empleo, a menos que seas un big boss a temprana edad." Y: no intentes aparentar mejor que tu vecino. Es una competencia contigo mismo.',
     howToApply: [
-      'Entiende el halving: cada 4 años, la recompensa a los mineros se reduce a la mitad. Menos supply nuevo = precio tiende a subir.',
-      'Si decides tener BTC, usa cold wallet (hardware wallet) para cantidades significativas',
-      'La estrategia DCA (Dollar Cost Average): comprar la misma cantidad cada mes, independientemente del precio',
-      'Nunca inviertas más de lo que estás dispuesto a perder. Es un activo volátil.',
+      'Cambia de empresa cada 2-3 años si no tienes gran proyección. Busca un mínimo del 20% de subida.',
+      'Di "sí" a todo lo que no dominas. Aprendes. La riqueza viene para quienes dicen sí a oportunidades.',
+      'Inicia al menos 3 proyectos paralelos. Si uno falla, empieza otro. No te dé miedo.',
+      'Invierte al menos el 40% de tus ingresos. Si tus gastos son altos, REDÚCELOS.',
     ],
     dailyApplication:
-      'Lee sobre el concepto de "escasez digital" y piensa: ¿qué otros activos digitales tienen supply limitado y por qué?',
+      'De los 14 consejos, ¿cuáles estás siguiendo ya? ¿Cuál es el que más te cuesta? Escribe 1 acción concreta para empezar a aplicarlo esta semana.',
     personalExample:
-      'Comprar 50€ de BTC cada mes durante 3 años (DCA) independientemente del precio históricamente ha dado mejor resultado que intentar hacer timing.',
+      '"Apaga las noticias. Te harán sentir miedo y depresión. La gente con miedo no hace cosas." E invierte en formación en salud, deporte, relaciones, marketing, negocios, finanzas e inversión.',
     challenge: {
-      title: 'Explica Bitcoin en 3 frases',
-      description: 'Si puedes explicar qué es Bitcoin en 3 frases simples, lo entiendes. Escríbelas.',
+      title: 'Autoevaluación de los 14 Consejos',
+      description: 'Puntúa del 0-10 cuánto aplicas cada uno de los 14 consejos. Elige el más bajo y diseña un plan de mejora.',
       xp: 120,
       duration: 'today',
     },
   },
+
+  // ─── CELIA RUBIO ─────────────────────────────────────────────────────────────
   {
     id: 'nl_006',
-    title: 'Crypto Noticias: Cómo no perder dinero en cripto',
-    source: 'Crypto Noticias',
-    category: 'crypto',
-    difficulty: 'medium',
-    xpReward: 130,
-    readTime: 4,
-    tags: ['altcoins', 'riesgo', 'scams'],
+    title: '5 consejos para tu futuro financiero',
+    source: 'Celia Rubio',
+    category: 'finanzas',
+    difficulty: 'easy',
+    xpReward: 90,
+    readTime: 3,
+    tags: ['finanzas-básicas', 'ahorro', 'fondo-emergencia'],
     summary:
-      'El 95% de las altcoins acaban en cero. Entender los ciclos del mercado cripto y los errores más comunes puede salvarte de perder todo en el siguiente bear market.',
+      'Los 5 fundamentos financieros: 1) Seguir tus gastos y apuntarlos. 2) Crear un fondo de emergencia de mínimo 3 meses. 3) Reducir gastos innecesarios. 4) Explorar ingresos adicionales. 5) Invertir y diversificar.',
     keyInsight:
-      'En crypto: "Not your keys, not your coins." Si tus cripto están en un exchange y este quiebra (FTX, Celsius...), lo pierdes todo. La custodia propia es la única custodia real.',
+      'Los factores que afectan tu economía son más psicológicos de lo que crees: la programación verbal ("el dinero es malo"), los modelos de referencia que tuviste, y las malas experiencias con el dinero en el pasado.',
     howToApply: [
-      'Diferencia entre Bitcoin (reserva de valor) y altcoins (especulación pura)',
-      'Nunca dejes grandes cantidades en exchanges. Aprende a usar wallets propias.',
-      'En bull market: todo sube y parece fácil. En bear: todo cae 80-90%. Gestiona el riesgo en el bull.',
-      'Evita los proyectos con promesas de APY del 100%+ — es matemáticamente insostenible.',
+      'Empieza por seguir tus gastos: apunta TODO lo que gastas durante 1 mes sin juzgarte',
+      'Crea un fondo de emergencia de 3 meses de ingresos en una cuenta separada e intocable',
+      'Compara precios antes de comprar y reduce 1 gasto innecesario cada semana',
+      'Explora qué puedes hacer fuera de tu trabajo para generar ingresos extra',
     ],
     dailyApplication:
-      'Si tienes cripto en exchanges, investiga cómo configurar una wallet propia (MetaMask para ETH, Electrum para BTC).',
+      'Hoy revisa tus creencias sobre el dinero: ¿qué te decían en casa sobre él? ¿Esas creencias te ayudan o te limitan ahora?',
     personalExample:
-      'El usuario que metió 10.000€ en Luna a máximos perdió el 99,9% en una semana. El que tenía solo BTC y ETH en cold wallet perdió 70% pero recuperó. El activo importa, pero la custodia también.',
+      'Tu cartera de inversiones según Celia: ING Fondo S&P500, Fondo Cartera Naranja, Bitcoin en SwissBorg, Ethereum en Metamask, y Trade Republic para acciones.',
     challenge: {
-      title: 'Seguridad Cripto',
-      description: 'Revisa dónde tienes guardadas tus criptos. ¿Están en tu propia wallet o en un exchange?',
+      title: 'Fondo de Emergencia Check',
+      description: '¿Tienes un fondo de emergencia de 3 meses? Si no: calcula cuánto necesitas y abre una cuenta de ahorro separada hoy.',
       xp: 100,
       duration: 'today',
     },
   },
 
-  // ─── EMPRENDIMIENTO ──────────────────────────────────────────────────────────
+  // ─── OMAR LOPEZ BTC ───────────────────────────────────────────────────────────
   {
     id: 'nl_007',
-    title: 'Movidas de Emprender: Tu primer cliente',
+    title: 'Bitcoin no es un activo refugio — es algo diferente',
+    source: 'Omar Lopez BTC',
+    category: 'crypto',
+    difficulty: 'medium',
+    xpReward: 140,
+    readTime: 4,
+    tags: ['bitcoin', 'store-of-value', 'inflación'],
+    summary:
+      'Bitcoin no es un activo refugio (esos son el oro o los bonos del gobierno, que se mantienen mejor en la volatilidad). Bitcoin es un objeto de valor pensado más para el largo plazo y como reserva de valor frente a la inflación de las monedas fiat.',
+    keyInsight:
+      '"A veces nos centramos tanto en lo que pasará que olvidamos buscar una solución. Hay que dejar el miedo sobre el futuro de Bitcoin y aprovechar lo que nos ofrece como herramienta."',
+    howToApply: [
+      'Entiende la diferencia: activo refugio = estabilidad (oro, bonos). Bitcoin = crecimiento largo plazo.',
+      'Como reserva de valor: dado lo inestable de las monedas y que acciones/bonos fluctúan, BTC al no estar ligado al sistema es protección ante inflación',
+      'Si compras BTC, piensa en años, no en meses. La volatilidad a corto es su naturaleza.',
+      'DeFi en Rootstock: finanzas descentralizadas sobre Bitcoin para depositar, prestar y ganar rendimiento',
+    ],
+    dailyApplication:
+      'Define cuál es tu objetivo con Bitcoin: ¿reserva de valor a largo plazo? ¿especulación? Tener claro el por qué define cuánto invertir y cuándo.',
+    personalExample:
+      'Grandes inversores institucionales ya tienen posición en Bitcoin: iShares Bitcoin Trust, Fidelity Bitcoin ETF, Grayscale BTC. El dinero institucional ya ha entrado.',
+    challenge: {
+      title: 'Define tu Estrategia BTC',
+      description: 'Escribe en 3 frases: qué es Bitcoin para ti, cuánto % de tu cartera dedicarías y en qué plataforma lo guardarías.',
+      xp: 130,
+      duration: 'today',
+    },
+  },
+
+  // ─── MOVIDAS DE EMPRENDER ─────────────────────────────────────────────────────
+  {
+    id: 'nl_008',
+    title: 'Cómo conseguir clientes: canales, confianza y newsletter',
     source: 'Movidas de Emprender',
     category: 'emprendimiento',
     difficulty: 'medium',
     xpReward: 160,
     readTime: 5,
-    tags: ['ventas', 'clientes', 'validación'],
+    tags: ['clientes', 'audiencia', 'newsletter'],
     summary:
-      'Antes de construir el producto perfecto, consigue 1 cliente. La validación real viene con dinero en la cuenta, no con "me parece interesante". El dinero es el único voto que cuenta.',
+      'Para conseguir clientes: ser descubierto por canales de captación en redes sociales centrándote en el contenido. Generar confianza con contenido que la cree y dé autoridad. Y reforzar esa confianza con newsletters — algo más personal que las redes.',
     keyInsight:
-      '"Un negocio sin clientes es un hobby caro." No hay mejor feedback que alguien pagando. Todo lo demás son hipótesis.',
+      '"Invierte tiempo en crear buen contenido — contenido que solucione un problema, que sea diferencial, hecho con mimo. Invierte tiempo en construir relaciones. Solo así tendrás el engranaje para que la inversión en publicidad sea rentable."',
     howToApply: [
-      'Define a quién ayudas, con qué problema específico y qué resultado concreto obtendrán',
-      'Crea una oferta de precio antes de crear el producto completo (pre-venta)',
-      'Habla con 10 personas de tu cliente ideal esta semana. Escucha más de lo que hablas.',
-      'El primer cliente está en tu red cercana. No necesitas anuncios para empezar.',
+      'Crea contenido que solucione problemas reales de tu cliente ideal, no que te guste a ti',
+      'Construye relaciones con otros creadores de sectores complementarios. Es una palanca de crecimiento.',
+      'Crea una newsletter para comunicarte de forma más personal con tu audiencia. Sin algoritmos.',
+      'Conoce a tu audiencia y optimiza contenidos y productos. Solo así la publicidad de pago será rentable.',
     ],
     dailyApplication:
-      'Hoy describe en 1 oración: "Ayudo a [QUIÉN] a [RESULTADO] a través de [CÓMO]". Si no puedes, tu propuesta de valor necesita trabajo.',
+      'Hoy escribe 1 pieza de contenido (post, video, email) que resuelva un problema específico de tu cliente ideal. No que te guste a ti — que le ayude a él.',
     personalExample:
-      'Antes de crear una academia online completa, ofrece 5 plazas a precio de fundador y entrega el contenido en directo. Validas demanda y cobras antes de crear.',
+      'Sistema para lanzar un curso: lista VIP de espera semanas antes, grabar por bloques, conseguir afiliados que muevan el lanzamiento, bonus exclusivos para las primeras 48h.',
     challenge: {
-      title: 'Propuesta de Valor en 1 Línea',
-      description: 'Escribe tu propuesta de valor en máximo 20 palabras. Que sea clara, específica y medible.',
-      xp: 140,
-      duration: 'today',
-    },
-  },
-  {
-    id: 'nl_008',
-    title: 'Emprende Aprendiendo: Aprende haciendo, no esperando',
-    source: 'Emprende Aprendiendo',
-    category: 'emprendimiento',
-    difficulty: 'easy',
-    xpReward: 100,
-    readTime: 3,
-    tags: ['aprendizaje', 'acción', 'mvp'],
-    summary:
-      'El error más común del emprendedor: estudiar durante años y nunca lanzar. El conocimiento sin acción no genera resultados. El mercado enseña más que cualquier curso.',
-    keyInsight:
-      '"Perfecto es el enemigo de lanzado." Un producto mediocre que llega al mercado aprende más en 1 semana que un producto perfecto que nunca sale.',
-    howToApply: [
-      'Define un MVP (Producto Mínimo Viable): lo mínimo para que alguien te pague',
-      'Pon un límite temporal: "lanzo en 30 días, con lo que tenga en ese momento"',
-      'Documenta tu proceso de aprendizaje públicamente. Eso ya es marketing.',
-      'Itera rápido: lanza, mide feedback, ajusta, vuelve a lanzar.',
-    ],
-    dailyApplication:
-      'Si llevas más de 3 meses "preparando" algo, pregúntate: ¿Qué versión simplificada podría lanzar esta semana?',
-    personalExample:
-      'Un newsletter semanal lanzado con 50 suscriptores y contenido "imperfecto" vale más que el newsletter "perfecto" que nunca sale porque le falta el diseño.',
-    challenge: {
-      title: 'Define tu MVP',
-      description: 'Para tu idea actual: ¿Cuál es la versión más simple que alguien pagaría? Escríbela en 5 puntos máximo.',
-      xp: 130,
+      title: 'Identifica tus 3 Canales de Captación',
+      description: 'Escribe cuáles son los 3 canales donde está tu cliente ideal y qué contenido publicarás en cada uno esta semana.',
+      xp: 150,
       duration: 'today',
     },
   },
   {
     id: 'nl_009',
-    title: 'Bootstraping: Crecer sin inversores',
-    source: 'Bootstraping',
+    title: 'Gestionar el burnout y los días temáticos',
+    source: 'Movidas de Emprender',
     category: 'emprendimiento',
-    difficulty: 'hard',
-    xpReward: 190,
-    readTime: 6,
-    tags: ['bootstrapping', 'rentabilidad', 'independencia'],
+    difficulty: 'easy',
+    xpReward: 100,
+    readTime: 3,
+    tags: ['burnout', 'productividad', 'organización'],
     summary:
-      'Bootstrapping es construir un negocio con tus propios recursos, sin inversores externos. Más lento, más difícil, pero te quedas con el 100% y tomas todas las decisiones.',
+      'El burnout en el emprendimiento tiene 3 dimensiones: físico, emocional y mental. Para combatirlo: aprende a gestionar las tareas, usa días temáticos, y en temporadas de muchas cosas date un parón para organizar lo que ya tienes.',
     keyInsight:
-      'Un negocio bootstrapped que genera 5.000€/mes en beneficio neto es más valioso para su dueño que una startup "valorada" en millones que pierde dinero cada mes.',
+      '"En temporadas de tantas cosas en la vida, es bueno dar un parón para organizar todo lo que ya tienes y trabajar en aquello que siempre quisiste hacer." A veces menos es más.',
     howToApply: [
-      'Prioriza rentabilidad desde el día 1, no crecimiento. Cash es rey.',
-      'Reduce costes fijos al mínimo. Cuando empieces: sin oficina, sin empleados, sin servidores caros.',
-      'El modelo de suscripción es el mejor para bootstrapping: predice ingresos y reduce churn',
-      'Reinvierte el 50% de beneficios en el negocio. Escala lo que funciona, elimina lo que no.',
+      'Identifica en qué dimensión estás quemado: física, emocional o mental',
+      'Usa días temáticos: lunes para contenido, martes para cliente, etc. No mezcles todo',
+      'Sé consciente de cómo eres y dónde puedes llegar. Tener una mentalidad realista es clave.',
+      'Date permiso para hacer una pausa y reorganizar antes de seguir a tope',
     ],
     dailyApplication:
-      'Calcula el "ramen profitability" de tu negocio: ¿cuántos clientes necesitas para cubrir tus gastos básicos de vida? Ese es tu primer hito real.',
+      'Hoy organiza tu semana en días temáticos. Cada día tiene un "sombrero" diferente. ¿Qué tipo de trabajo harás cada día?',
     personalExample:
-      'DHH y Jason Fried construyeron Basecamp (software de gestión) con 0 inversores, lo cobran desde el día 1 y hoy facturan millones con un equipo pequeño. No necesitas VC.',
+      'Ejemplo de días temáticos: Lunes=creación de contenido, Martes=clientes, Miércoles=operaciones, Jueves=aprendizaje, Viernes=revisión y planificación.',
     challenge: {
-      title: 'Cálculo de Punto de Equilibrio',
-      description: 'Calcula cuántos clientes/ventas necesitas para que tu negocio se pague a sí mismo.',
-      xp: 170,
+      title: 'Diseña tu Semana Temática',
+      description: 'Asigna un tema principal a cada día de la próxima semana y escribe qué NO harás en cada día para respetar el tema.',
+      xp: 110,
+      duration: 'today',
+    },
+  },
+
+  // ─── EMPRENDE APRENDIENDO ─────────────────────────────────────────────────────
+  {
+    id: 'nl_010',
+    title: 'Las 8 herramientas de un negocio digital que factura',
+    source: 'Emprende Aprendiendo',
+    category: 'emprendimiento',
+    difficulty: 'easy',
+    xpReward: 110,
+    readTime: 4,
+    tags: ['herramientas', 'sistemas', 'eficiencia'],
+    summary:
+      'Todo su sistema de negocio está basado en solo 8 herramientas: Notion (centro de operaciones), Beehiiv (email marketing), Checkoutpage+Stripe (pagos), Riverside (grabación), Vimeo+Dropbox (vídeos), y ChatGPT (comodín para todo).',
+    keyInsight:
+      '"Cuanto menos tiempo pierdas en configuraciones interminables, en intentar integrar apps, más tiempo puedes dedicar a pensar en lo importante: cómo generar más valor para tus clientes." Primero monetiza, luego automatiza.',
+    howToApply: [
+      'Notion: organización de proyectos, tareas, documentación. Versión gratis, 0€.',
+      'Beehiiv: para tu newsletter (gratis hasta 2.500 suscriptores). Tu activo más valioso.',
+      'Checkoutpage + Stripe: páginas de venta y cobro en minutos. Sin complicaciones.',
+      'No te metas en muchos gastos de herramientas hasta que no generes ingresos primero.',
+    ],
+    dailyApplication:
+      'Revisa cuántas herramientas de pago tienes activas. ¿Cuáles realmente usas? Cancela las que no uses y quédate con lo esencial.',
+    personalExample:
+      'Con estas 8 herramientas gestionan creación de contenido, marketing, ventas, distribución, cobros y entrega. El objetivo: ponérselo fácil a ellos y al cliente.',
+    challenge: {
+      title: 'Auditoría de Herramientas',
+      description: 'Lista todas las herramientas que pagas o usas. ¿Cuántas son realmente necesarias? ¿Qué puedes simplificar?',
+      xp: 100,
       duration: 'today',
     },
   },
   {
-    id: 'nl_010',
-    title: 'Anyelo Rico: Monetiza tu conocimiento',
-    source: 'Anyelo Rico',
+    id: 'nl_011',
+    title: 'El caso de Schedule I: 20M€ solo, con un videojuego',
+    source: 'Emprende Aprendiendo',
     category: 'emprendimiento',
     difficulty: 'medium',
-    xpReward: 140,
-    readTime: 4,
-    tags: ['infoproductos', 'conocimiento', 'monetización'],
-    summary:
-      'Lo que sabes tiene valor. El conocimiento especializado que para ti es obvio, para otros es oro. Los infoproductos (cursos, ebooks, consultoría) tienen márgenes del 90%+.',
-    keyInsight:
-      'No necesitas ser el mejor del mundo en algo para enseñarlo. Solo necesitas saber más que tu cliente objetivo. El experto que enseña a principiantes gana más que el experto que solo aplica.',
-    howToApply: [
-      'Identifica tu "zona de conocimiento especial": ¿En qué eres notablemente mejor que la media?',
-      'Valida el producto antes de crearlo: pre-vende con una landing simple y Stripe',
-      'Empieza con un infoproducto barato (ebook, mini-curso) para ganar confianza y testimonios',
-      'Sube precios cuando tengas prueba social. El precio bajo al inicio es para acumular casos de éxito.',
-    ],
-    dailyApplication:
-      'Lista 5 cosas que sabes hacer mejor que la mayoría de tu entorno. Elige una y pregunta: ¿Pagarían por aprender esto?',
-    personalExample:
-      'Si dominas Excel mejor que el 95% de tu empresa, hay pymes que pagarían 500€ por un taller de 4h. Tu conocimiento tiene precio de mercado.',
-    challenge: {
-      title: 'Tu Conocimiento Vendible',
-      description: 'Crea una oferta de 1 hora de consultoría sobre algo que domines. Ponle precio y comparte el enlace con alguien.',
-      xp: 160,
-      duration: 'this-week',
-    },
-  },
-
-  // ─── MARKETING & SEO ─────────────────────────────────────────────────────────
-  {
-    id: 'nl_011',
-    title: 'Bigseo: SEO que funciona en 2024',
-    source: 'Bigseo',
-    category: 'marketing',
-    difficulty: 'medium',
-    xpReward: 150,
+    xpReward: 160,
     readTime: 5,
-    tags: ['seo', 'google', 'contenido'],
+    tags: ['producto-digital', 'lanzamiento', 'comunidad'],
     summary:
-      'El SEO ha cambiado: Google ya no premia el contenido que usa más palabras clave. Premia el contenido que responde mejor una intención de búsqueda y demuestra autoridad real.',
+      'Tyler lanzó Schedule I (videojuego de una persona) y vendió +20 millones de euros. Claves: creó comunidad primero en TikTok/YouTube antes del lanzamiento, lanzó en acceso anticipado imperfecto, eligió un ángulo provocador y aprovechó plataformas existentes (Steam).',
     keyInsight:
-      'EEAT (Experience, Expertise, Authoritativeness, Trustworthiness). Google quiere saber que quien escribe tiene experiencia real. El contenido genérico de IA sin expertise humano pierde posiciones.',
+      '"No construyas en silencio. Documenta. Comparte. Deja que la gente se suba al tren antes de que arranque." Y: no esperes al producto final. Vende cuanto antes y mejora en público.',
     howToApply: [
-      'Investiga la intención de búsqueda antes de escribir: ¿Qué quiere REALMENTE el usuario?',
-      'Linkbuilding interno: conecta tus artículos entre sí para distribuir autoridad',
-      'Usa Google Search Console para ver qué páginas tuyas tienen impresiones pero poca CTR. Mejora el title y la meta description.',
-      'La velocidad de carga y la experiencia móvil ya son factores de ranking. Core Web Vitals.',
+      'Crea comunidad ANTES del producto. Meses de documentación generan miles de personas esperando comprar.',
+      'Lanza en "acceso anticipado": ingresos desde el día 1, feedback real, construyes con la comunidad.',
+      'El ángulo importa: un producto que cuenta una historia única se comparte solo.',
+      'Usa plataformas con tráfico ya existente (Steam, YouTube, Amazon, Etsy, Udemy).',
     ],
     dailyApplication:
-      'Busca tu negocio/blog en Google. ¿Apareces? Si no: ¿qué buscaría tu cliente ideal para encontrarte? Crea contenido para esa búsqueda.',
+      'Piensa en tu proyecto actual: ¿estás construyendo en silencio esperando al "producto perfecto"? ¿Cuál es la versión más pequeña que podrías lanzar o compartir esta semana?',
     personalExample:
-      'Un artículo largo, profundo y con experiencia propia sobre "cómo hacer X" que resuelve la búsqueda al 100% supera a 10 artículos superficiales con más palabras clave.',
+      '"El coste marginal es cero: vender 1.000 copias o 1 millón cuesta lo mismo. Los productos digitales son máquinas de escalar." No un trabajo — un activo.',
     challenge: {
-      title: 'Auditoría SEO Básica',
-      description: 'Busca tu web/perfil en Google y analiza: ¿Qué 3 búsquedas deberían encontrarte y no te encuentran?',
+      title: 'Documenta Públicamente tu Proceso',
+      description: 'Publica hoy en alguna red social el detrás de escenas de algo en lo que estés trabajando. No el resultado — el proceso.',
       xp: 140,
       duration: 'today',
     },
   },
   {
     id: 'nl_012',
-    title: 'Javi Rueda: Email marketing que convierte',
-    source: 'Javi Rueda',
-    category: 'marketing',
+    title: '5 pilares para crear algo que la gente quiera',
+    source: 'Emprende Aprendiendo',
+    category: 'emprendimiento',
     difficulty: 'medium',
-    xpReward: 130,
-    readTime: 4,
-    tags: ['email', 'lista', 'conversión'],
+    xpReward: 170,
+    readTime: 5,
+    tags: ['producto', 'validación', 'pricing'],
     summary:
-      'Una lista de email es el único activo digital que realmente te pertenece. Instagram puede cerrarte la cuenta, Google puede quitarte el tráfico. Tu lista, nadie te la quita.',
+      '1) Empieza por el problema, no por la tecnología. 2) Lanza rápido, aunque sea imperfecto. 3) Cobra por el valor, no por las características. 4) El equipo cambia según la etapa. 5) Escucha más a los clientes que pagan y usan mucho.',
     keyInsight:
-      'El email tiene un ROI de 36€ por cada 1€ invertido (según DMA). Es el canal con mayor conversión porque es directo, personal y el usuario ha elegido recibirlo.',
+      '"Para tener éxito, resuelve un problema que conozcas bien, lanza tu solución al mercado cuanto antes para aprender de los errores y cobra por el valor real que aportas a la vida de tus clientes."',
     howToApply: [
-      'Crea un lead magnet irresistible: algo gratis de tanto valor que la gente se suscriba solo por eso',
-      'Escribe emails como si escribieras a UN amigo, no a miles. La personalización aumenta la apertura.',
-      'La frecuencia importa: mejor 1 email semanal de calidad que 5 correos mediocres',
-      'Segmenta tu lista: no todo el mundo quiere lo mismo. Los emails segmentados tienen 2x más clicks.',
+      'No vendas "pasta de dientes para encías sanas". Vende "una sonrisa bonita". Cobra por el resultado emocional.',
+      'Al principio: contrata generalistas. Al crecer: especialistas.',
+      'El verdadero trabajo del fundador es decidir qué NO hacer para avanzar rápido.',
+      'El dinero es la mejor forma de saber si tu producto realmente importa.',
     ],
     dailyApplication:
-      'Si no tienes newsletter: crea una cuenta gratuita en Brevo o Mailchimp hoy y escribe el primer email a tus contactos explicando qué vas a compartir.',
+      'Reescribe tu oferta: ¿qué vende realmente tu producto en términos de resultado emocional o práctico? No las características — la transformación.',
     personalExample:
-      'Una lista de 500 suscriptores comprometidos vale más que 50.000 seguidores en Instagram. La primera convierte, la segunda depende de un algoritmo.',
+      '"No compres tecnología — compra una forma más fácil o barata de progresar en tu vida." Apple ganó a los GPS no por mejor tecnología, sino por ser más útil.',
     challenge: {
-      title: 'Primera Pieza de Email Marketing',
-      description: 'Escribe un email de bienvenida para tu lista (real o futura). Que explique quién eres y qué valor aportas.',
+      title: 'Reescribe tu Oferta',
+      description: 'Escribe tu propuesta de valor actual. Luego reescríbela centrándote 100% en el resultado del cliente, no en lo que haces tú.',
+      xp: 160,
+      duration: 'today',
+    },
+  },
+
+  // ─── LIBRO AL DÍA ─────────────────────────────────────────────────────────────
+  {
+    id: 'nl_013',
+    title: 'Las 6 carpetas de tu segundo cerebro',
+    source: 'Libro al Día',
+    category: 'libros',
+    difficulty: 'easy',
+    xpReward: 100,
+    readTime: 3,
+    tags: ['segundo-cerebro', 'notion', 'organización'],
+    summary:
+      'El sistema de segundo cerebro tiene 6 carpetas: 1) Bandeja de entrada (capturar). 2) Áreas de administración. 3) Objetivos actuales. 4) Compromisos a futuro. 5) Temas de interés por aprender. 6) Carpeta de espera (lo que será importante en algún punto).',
+    keyInsight:
+      '"La mejor manera para aprender es crear un mapa y una guía en orden para acordarte. Crear un Notion es la mejor manera." No basta con leer — tienes que releer lo aprendido para que se quede.',
+    howToApply: [
+      'Crea las 6 carpetas en Notion hoy. Empieza por la bandeja de entrada — apunta algo ahí ahora mismo.',
+      'Objetivos actuales: anota todos los que tienes en este momento, por pequeños que sean.',
+      'Temas de interés: lista todo lo que quieres aprender. Priorizarás después.',
+      'Carpeta de espera: lo que no es urgente ahora pero no quieres olvidar.',
+    ],
+    dailyApplication:
+      'Dedica 20 minutos hoy a organizar tu Notion o app de notas con estas 6 categorías. Solo la estructura. Luego ya las rellenas.',
+    personalExample:
+      '"De qué sirve aprender y aprender pero luego eso no se queda en ningún sitio." El conocimiento sin sistema se evapora. El sistema multiplica cada cosa que aprendes.',
+    challenge: {
+      title: 'Configura tu Segundo Cerebro',
+      description: 'Crea las 6 carpetas en Notion (o tu herramienta favorita) y añade al menos 3 entradas en cada una.',
       xp: 120,
       duration: 'today',
     },
   },
   {
-    id: 'nl_013',
-    title: 'Eladio Mendoza: Marketing sin presupuesto',
-    source: 'Eladio Mendoza',
-    category: 'marketing',
-    difficulty: 'easy',
-    xpReward: 110,
-    readTime: 3,
-    tags: ['growth', 'orgánico', 'comunidad'],
-    summary:
-      'El mejor marketing es el que hace que tus clientes hablen de ti. El boca a boca supera a cualquier campaña de pago. Obsesiónate con la experiencia del cliente antes que con la adquisición.',
-    keyInsight:
-      '"Si tienes que gastar en marketing para crecer, tu producto no es suficientemente bueno." Los mejores negocios crecen porque el producto se vende solo y los clientes traen a otros.',
-    howToApply: [
-      'Supera las expectativas en cada entrega. El "wow factor" genera referencias.',
-      'Pide testimonios activamente. El 90% de compras online empieza por reviews.',
-      'Crea un programa de referidos: incentiva a tus clientes a traer nuevos clientes',
-      'Documenta los resultados de tus clientes con casos de estudio. Es tu mejor anuncio.',
-    ],
-    dailyApplication:
-      'Contacta hoy a un cliente o usuario satisfecho y pídele un testimonio honesto. Úsalo en tu web, redes o materiales de venta.',
-    personalExample:
-      'Una empresa de servicio que entrega un 20% más de lo prometido genera clientes que vuelven y refieren. El coste de adquisición se acerca a cero.',
-    challenge: {
-      title: 'Recopilar 3 Testimonios',
-      description: 'Escribe a 3 personas que se hayan beneficiado de tu trabajo/producto y pídeles un testimonio.',
-      xp: 100,
-      duration: 'this-week',
-    },
-  },
-  {
     id: 'nl_014',
-    title: 'Javi Ortega: SEO técnico para no técnicos',
-    source: 'Javi Ortega',
-    category: 'marketing',
-    difficulty: 'hard',
-    xpReward: 170,
-    readTime: 6,
-    tags: ['seo-técnico', 'core-web-vitals', 'indexación'],
-    summary:
-      'El SEO técnico es el cimiento sobre el que construyes el resto. Si Google no puede rastrear, indexar y entender tu web, el mejor contenido del mundo es invisible.',
-    keyInsight:
-      'La mayoría de los problemas de SEO no son de contenido, son técnicos. Un sitio lento, sin HTTPS, con canonical errors o contenido duplicado nunca rankeará bien independientemente de lo bueno que sea el artículo.',
-    howToApply: [
-      'Instala Google Search Console GRATIS y revisa los errores de cobertura (páginas que Google no puede indexar)',
-      'Comprueba tu velocidad con PageSpeed Insights. Menos de 3 segundos de carga en móvil es el objetivo.',
-      'Asegúrate de que tienes HTTPS, un sitemap.xml y un robots.txt correctos',
-      'Evita contenido duplicado: usa canonical tags cuando tengas URLs similares',
-    ],
-    dailyApplication:
-      'Entra en pagespeed.web.dev y analiza la velocidad de tu web. Si puntúas menos de 50 en móvil, tienes trabajo urgente.',
-    personalExample:
-      'Un ecommerce que pasó de 8 segundos de carga a 2 segundos incrementó conversiones un 32% y posiciones en Google un 40%. La velocidad es dinero.',
-    challenge: {
-      title: 'Análisis Técnico SEO',
-      description: 'Analiza tu web con Search Console y PageSpeed. Identifica el problema técnico #1 a resolver.',
-      xp: 180,
-      duration: 'today',
-    },
-  },
-  {
-    id: 'nl_015',
-    title: 'Rafa Castón: Copywriting que vende',
-    source: 'Rafa Castón',
-    category: 'marketing',
-    difficulty: 'medium',
-    xpReward: 140,
-    readTime: 5,
-    tags: ['copywriting', 'persuasión', 'textos'],
-    summary:
-      'El copywriting es el arte de escribir textos que provocan una acción. No se trata de escribir bonito, se trata de entender a tu cliente mejor que él mismo y mostrarle que tienes la solución.',
-    keyInsight:
-      'La gente no compra productos, compra transformaciones. No compra un curso de Excel, compra "conseguir ese ascenso" o "no depender del becario". Vende el resultado, no el proceso.',
-    howToApply: [
-      'Fórmula PAS: Problema (agita el dolor), Agitación (hazlo sentir más urgente), Solución (tu oferta)',
-      'Usa las palabras de tus clientes, no las tuyas. Lee reviews, encuestas, comentarios.',
-      'El headline es el 80% del éxito. Si el título no engancha, el resto no importa.',
-      'Añade prueba social específica: no "miles de clientes satisfechos", sino "Ana López multiplicó sus ventas un 230% en 90 días".',
-    ],
-    dailyApplication:
-      'Reescribe el título de tu web o perfil con la fórmula: "[Resultado deseado] para [cliente ideal] sin [mayor obstáculo]".',
-    personalExample:
-      '"Aprende inglés" vs "Habla inglés con confianza en reuniones internacionales sin años de academia". El segundo vende 5x más porque conecta con el deseo real.',
-    challenge: {
-      title: 'Reescribe tu Propuesta',
-      description: 'Aplica la fórmula PAS a tu oferta principal. Escribe los 3 párrafos (Problema, Agitación, Solución).',
-      xp: 150,
-      duration: 'today',
-    },
-  },
-
-  // ─── FINANZAS PERSONALES ──────────────────────────────────────────────────────
-  {
-    id: 'nl_016',
-    title: 'Celia Rubio: Dinero y bienestar van juntos',
-    source: 'Celia Rubio',
-    category: 'finanzas',
-    difficulty: 'easy',
-    xpReward: 100,
-    readTime: 3,
-    tags: ['finanzas-personales', 'bienestar', 'mindset-dinero'],
-    summary:
-      'La relación con el dinero empieza en la cabeza. Las creencias limitantes sobre el dinero ("el dinero es malo", "yo no sirvo para esto") sabotean tus finanzas antes de que empieces.',
-    keyInsight:
-      'Si crees que no mereces ganar más, inconscientemente lo harás realidad. La libertad financiera empieza con revisar qué te contaron sobre el dinero cuando eras pequeño.',
-    howToApply: [
-      'Escribe tus 3 creencias sobre el dinero heredadas de tu familia. ¿Son ciertas o son limitaciones?',
-      'Habla de dinero con normalidad: es una herramienta, no un tabú',
-      'Educa tu instinto financiero: lleva un presupuesto 1 mes sin juzgarte, solo observando',
-      'El bienestar financiero no es tener millones: es tener más de lo que gastas, mes a mes.',
-    ],
-    dailyApplication:
-      'Anota hoy TODOS tus gastos del día, por pequeños que sean. Sin juzgar, solo observando.',
-    personalExample:
-      'Alguien que gana 4.000€/mes y gasta 3.800€ está en peor situación financiera que alguien que gana 2.000€ y gasta 1.400€. El margen importa más que el sueldo.',
-    challenge: {
-      title: 'Creencias sobre el Dinero',
-      description: 'Escribe 5 frases sobre el dinero que escuchaste de niño. Clasifícalas: ¿te ayudan o te limitan?',
-      xp: 90,
-      duration: 'today',
-    },
-  },
-
-  // ─── LIBROS & APRENDIZAJE ─────────────────────────────────────────────────────
-  {
-    id: 'nl_017',
-    title: 'Libro al Día: Cómo leer más y recordar más',
+    title: 'Los 2 tipos de personas y el 0.1% diario',
     source: 'Libro al Día',
-    category: 'libros',
-    difficulty: 'easy',
-    xpReward: 110,
-    readTime: 3,
-    tags: ['lectura', 'retención', 'notas'],
-    summary:
-      'El problema no es cuántos libros lees. Es cuánto retienes y aplicas. Leer 50 libros al año sin sistema de notas = perder el 95% en 7 días. Leer 12 con notas aplicadas = transformación real.',
-    keyInsight:
-      'La lectura pasiva es entretenimiento. La lectura activa (subrayar, parafrasear, conectar ideas, aplicar) es educación. El papel del libro no es darte información, es cambiar tu forma de actuar.',
-    howToApply: [
-      'Lee con un objetivo: "¿Qué quiero aprender específicamente con este libro?"',
-      'Subraya solo lo que vas a usar. Si subrayas todo, es que no filtras nada.',
-      'Al terminar un capítulo, cierra el libro y resume en 3 frases lo más importante',
-      'Crea un sistema de notas (Notion, Obsidian, libreta) donde conectas ideas de distintos libros',
-    ],
-    dailyApplication:
-      'Toma el último libro que leíste. Sin mirarlo, escribe las 5 ideas más importantes que recuerdes. Ese es tu nivel real de retención.',
-    personalExample:
-      'Charlie Munger leyó durante décadas con un sistema simple: si una idea no cabe en una frase propia, no la has entendido. La comprensión se demuestra con la simplificación.',
-    challenge: {
-      title: 'Sistema de Notas de Lectura',
-      description: 'Crea tu plantilla de notas para libros: título, idea central, 3 puntos clave, 1 acción concreta.',
-      xp: 100,
-      duration: 'today',
-    },
-  },
-  {
-    id: 'nl_018',
-    title: 'Aura Pods: El poder del podcast como herramienta de aprendizaje',
-    source: 'Aura Pods',
     category: 'libros',
     difficulty: 'easy',
     xpReward: 90,
     readTime: 3,
-    tags: ['podcasts', 'audio', 'aprendizaje-pasivo'],
+    tags: ['hábitos', 'mejora-continua', 'mentalidad'],
     summary:
-      'Los podcasts son la universidad gratuita más subestimada. Mientras haces deporte, cocinas o conduces, puedes absorber conocimiento de los mejores del mundo en cualquier área.',
+      'Hay 2 tipos de personas: los que persiguen su cola constantemente, y los que hacen un 0.1% de cambios día a día para ser mejor en cualquier ámbito. Nadie llega a donde está de suerte, sino de pequeñas cosas que con el tiempo se vuelven grandes.',
     keyInsight:
-      'El problema no es falta de tiempo para aprender. Es falta de sistematización. Escuchar un podcast sin tomar notas = olvidar el 90% en 48 horas. Necesitas un sistema de captura.',
+      '"Trátate a ti mismo como te gustaría que te trataran. Tú eres tu propio compañero de piso con tus manías, secretos, gustos y disgustos. ¿Por qué tratarte tan mal y a todos bien?"',
     howToApply: [
-      'Cuando un podcast te dé una idea valiosa: para, graba una nota de voz o escríbela inmediatamente',
-      'Usa herramientas como Snipd o Airr para guardar clips de audio directamente',
-      'Procesa tus notas de podcast cada semana: ¿qué puedo aplicar esta semana?',
-      'Elige 3-5 podcasts de referencia en tu área. Más de eso es ruido.',
+      'Sal de tu zona de confort: prueba ir en dirección contraria en algo de tu rutina y observa qué pasa',
+      'Para tomar decisiones: define tus prioridades primero. ¿Dinero o amor? ¿Familia o amigos? Elige.',
+      'En el trabajo: tomate un momento de reflexión diaria. ¿Qué hice hoy que me acerca a mis objetivos?',
+      'El mundo del arte: lo que importa es el acto de crear, no los likes. Que te motive crear, no validar.',
     ],
     dailyApplication:
-      'La próxima vez que escuches un podcast, ten el móvil listo para apuntar la idea más valiosa. Solo una. Luego aplícala.',
+      'Hoy elige UN pequeño cambio del 0.1% en un área de tu vida. Algo tan pequeño que sea ridículo no hacerlo. Hazlo y repítelo mañana.',
     personalExample:
-      'Convertir el trayecto de 30 min al trabajo en aprendizaje = 250h de conocimiento al año. Eso es más de 10 cursos universitarios de forma gratuita.',
+      '"Si crees que la rutina te hace infeliz, adopta esta mentalidad: nadie se baña dos veces en el mismo río. Ningún día es exactamente igual."',
     challenge: {
-      title: 'Sistema de Captura de Podcasts',
-      description: 'Escucha un episodio de tu podcast favorito y extrae las 3 ideas más accionables. Escríbelas y decide cuál aplicas esta semana.',
+      title: 'Tu Mejora del 0.1% de Hoy',
+      description: 'Define una mejora diminuta en 1 área (salud, negocio, relaciones, finanzas). Hazla ahora y ponla en tu calendario para mañana.',
       xp: 80,
       duration: 'today',
     },
   },
 
-  // ─── AUTÓNOMO & FREELANCE ─────────────────────────────────────────────────────
+  // ─── BIGSEO ───────────────────────────────────────────────────────────────────
   {
-    id: 'nl_019',
-    title: 'Autónomos: Darse de alta sin morir en el intento',
-    source: 'Autonomos',
-    category: 'autonomo',
-    difficulty: 'medium',
-    xpReward: 160,
-    readTime: 5,
-    tags: ['autónomo', 'hacienda', 'facturación'],
+    id: 'nl_015',
+    title: '5 beneficios de tener una newsletter para tu negocio',
+    source: 'Bigseo',
+    category: 'marketing',
+    difficulty: 'easy',
+    xpReward: 110,
+    readTime: 3,
+    tags: ['newsletter', 'email', 'audiencia'],
     summary:
-      'Ser autónomo en España tiene más ventajas fiscales de las que crees si las usas bien. La clave: deducir todos los gastos legalmente permitidos y planificar la facturación.',
+      'Audiencia real: los suscriptores han decidido recibir tu contenido, puedes comunicarte sin algoritmos. Fidelización: es más fácil crear relaciones de confianza. Conversión: el email convierte más que cualquier red social.',
     keyInsight:
-      'El autónomo que no lleva contabilidad paga impuestos de más. Cada gasto relacionado con tu actividad es deducible. Tu formación, tu móvil (parcial), tu ordenador, la gasolina... todo tiene precio fiscal.',
+      '"A diferencia de la visibilidad en redes sociales, los suscriptores de tu newsletter han decidido suscribirse. Podrás comunicarte con ellos cuando tú quieras sin depender de algoritmos."',
     howToApply: [
-      'Guarda TODOS los tickets de gastos relacionados con tu negocio. Digitalízalos (app Holded, Refy)',
-      'Conoce los modelos obligatorios: 303 (IVA trimestral), 130 (IRPF trimestral)',
-      'Valora la tarifa plana de autónomos si empiezas: primeros meses con cuota reducida',
-      'Considera si te conviene el régimen de módulos o estimación directa simplificada según tu facturación',
+      'Invita a tu audiencia a participar: pide retroalimentación o consejos. Genera interacción.',
+      'Comparte vivencias personales, consejos y reflexiones. Si aportas valor, te seguirán leyendo.',
+      'Empieza aunque tengas 10 suscriptores. La consistencia construye la audiencia.',
+      'Plataformas recomendadas: Beehiiv (lo que usa Emprende Aprendiendo), Kit, Mailchimp',
     ],
     dailyApplication:
-      'Revisa tus últimas 10 facturas de gastos de negocio. ¿Cuántas deduces? ¿Cuántas no?',
+      'Si no tienes newsletter: define hoy el tema, el nombre y la frecuencia. Si la tienes: escribe el siguiente email antes de que pase el día.',
     personalExample:
-      'Un autónomo que factura 30.000€/año y deduce 8.000€ en gastos reales solo tributa por 22.000€. La diferencia en cuota de IRPF puede ser 2.000-3.000€ al año.',
+      '"Una lista de 500 suscriptores comprometidos vale más que 50.000 seguidores en Instagram. La primera convierte, la segunda depende de un algoritmo."',
     challenge: {
-      title: 'Auditoría de Deducciones',
-      description: 'Lista todos los gastos mensuales de tu actividad que son deducibles. ¿Los estás declarando todos?',
-      xp: 150,
+      title: 'Primer Email de tu Newsletter',
+      description: 'Escribe un email de presentación: quién eres, qué vas a compartir y por qué debería importarle al lector. Aunque no lo envíes aún.',
+      xp: 120,
+      duration: 'today',
+    },
+  },
+
+  // ─── DINERO Y BOLSA ──────────────────────────────────────────────────────────
+  {
+    id: 'nl_016',
+    title: 'Warren Buffett: el consejo que nunca cambia',
+    source: 'Dinero y Bolsa',
+    category: 'inversion',
+    difficulty: 'easy',
+    xpReward: 100,
+    readTime: 2,
+    tags: ['buffett', 'indexados', 'sp500'],
+    summary:
+      'La recomendación de Warren Buffett que se ha mantenido igual durante décadas: invertir en un fondo indexado low cost que replique el S&P500. Simple, barato y consistentemente superior al 90% de los gestores activos.',
+    keyInsight:
+      '"Para aprender a invertir, bastan dos cursos: cómo valorar una empresa y cómo pensar en los mercados. No hace falta ser un genio. Basta con entender tu círculo de competencia y conservar la estabilidad emocional."',
+    howToApply: [
+      'Elige un fondo indexado S&P500 o MSCI World con las comisiones más bajas (TER < 0.20%)',
+      'Invierte de forma automática y periódica. Cada mes, el mismo día.',
+      'Mantén la estabilidad emocional: ni euforia en subidas, ni pánico en bajadas.',
+      'Tu círculo de competencia: solo invierte en lo que entiendes de verdad.',
+    ],
+    dailyApplication:
+      'Busca cuánto cobra de comisión el fondo o plan de pensiones que tienes en tu banco. Compáralo con un indexado equivalente. La diferencia en 20 años puede ser enorme.',
+    personalExample:
+      '"El mercado es una máquina de transferir dinero de los impacientes a los pacientes." Invertir en S&P500 y esperar décadas es el consejo más aburrido y más rentable a la vez.',
+    challenge: {
+      title: 'Comparativa de Comisiones',
+      description: 'Compara las comisiones de tu inversión actual con las de un fondo indexado equivalente (MyInvestor, Finizens). ¿Cuánto dinero pierdes al año en comisiones?',
+      xp: 90,
+      duration: 'today',
+    },
+  },
+
+  // ─── BOOTSTRAPING ─────────────────────────────────────────────────────────────
+  {
+    id: 'nl_017',
+    title: 'Los pilares para llevar un negocio con excelencia',
+    source: 'Bootstraping',
+    category: 'autonomo',
+    difficulty: 'medium',
+    xpReward: 150,
+    readTime: 5,
+    tags: ['liderazgo', 'equipo', 'hospitalidad'],
+    summary:
+      'Los 7 pilares para llevar un negocio: pasión, servicio y hospitalidad, optimismo genuino, inteligencia curiosa, ética del trabajo, empatía, y autoconciencia. Y el más importante: un buen líder conoce sus puntos fuertes y se pregunta "¿por qué deberían ser dirigidos por mí?"',
+    keyInsight:
+      '"Hospitalidad es cómo hacer sentir al cliente al entrar a tu producto. El servicio es la entrega de aquello." Son distintos. Puedes tener buen producto pero mala experiencia, y el cliente no vuelve.',
+    howToApply: [
+      'Los 5 pasos para gestionar errores: 1) Consciencia, 2) Reconocimiento, 3) Disculpa, 4) Acción, 5) Generosidad adicional.',
+      'Ejerce presión con suavidad: da al equipo la sensación de querer seguir, sin pasarte de amable hasta perder credibilidad.',
+      'No bases tu cultura en el miedo. Da confianza de que el trabajador quiera seguir aprendiendo allí.',
+      'Para contratar: busca iniciativa, qué le motiva y cómo lo consigue. Más que experiencia pura.',
+    ],
+    dailyApplication:
+      'Piensa en el último error que cometiste con un cliente o colega. ¿Seguiste los 5 pasos? ¿Qué faltó?',
+    personalExample:
+      '"Ahorra como un pesimista, invierte como un optimista. Planifica para los peores escenarios, pero sueña con los mejores. Ambos deben coexistir."',
+    challenge: {
+      title: 'Protocolo de Gestión de Errores',
+      description: 'Escribe tu protocolo personal de 5 pasos para cuando cometas un error con un cliente. Que sea concreto y usable.',
+      xp: 140,
       duration: 'today',
     },
   },
   {
-    id: 'nl_020',
-    title: 'Adria Lopez Pastor: De empleado a emprendedor',
-    source: 'Adria Lopez Pastor',
+    id: 'nl_018',
+    title: 'Adversidades y emprendimiento: lo que nadie te cuenta',
+    source: 'Bootstraping',
     category: 'autonomo',
-    difficulty: 'hard',
-    xpReward: 180,
-    readTime: 6,
-    tags: ['transición', 'seguridad', 'ingresos-propios'],
+    difficulty: 'medium',
+    xpReward: 130,
+    readTime: 4,
+    tags: ['adversidad', 'resiliencia', 'incertidumbre'],
     summary:
-      'El salto de empleado a emprendedor no tiene que ser un salto al vacío. La estrategia correcta: construir ingresos alternativos mientras tienes nómina, y saltar cuando el colchón está listo.',
+      'Aceptar la incertidumbre y estar abierto a experimentar nichos dejándolo al destino construyéndolo. La transformación viene de un momento caótico. Los desafíos de la vida no son el enemigo — son el catalizador.',
     keyInsight:
-      'No necesitas renunciar mañana. Necesitas llegar a 3 meses de gastos ahorrados + ingresos del lado iguales al 50% de tu nómina antes de saltar. Con esa base, el riesgo es calculado, no una apuesta.',
+      '"Crear algo toma paciencia y tiempo. Al romperlo no tarda segundos. Lo mejor que puedes hacer es dejarlo al tiempo." Y: la eficiencia real viene de equilibrar producción con espacios para pensar y explorar.',
     howToApply: [
-      'Empieza tu proyecto paralelo mientras tienes empleo. Los fines de semana y tardes son tuyos.',
-      'Define tu número: ¿cuánto necesitas ganar para cubrir gastos básicos de vida como autónomo?',
-      'Consigue tus primeros 3-5 clientes antes de dejar tu trabajo',
-      'Crea un colchón de 6 meses de gastos fijos antes del salto',
+      'Aunque aún no suceda, prepárate para un imprevisto. Tener un plan B es profesionalismo, no pesimismo.',
+      'Prioriza los problemas más grandes de tu emprendimiento (80%) y dedica el 20% a los menores.',
+      'Sigue aprendiendo de todos los temas necesarios: lee, infórmate, no dejes de formarte.',
+      'Averigua cómo emplear tu tiempo en lo que es tu verdadero valor como persona.',
     ],
     dailyApplication:
-      'Calcula tu "número de libertad": el ingreso mensual mínimo para ser autónomo cómodamente. ¿Cuánto te falta para llegar?',
+      'Identifica el mayor problema actual de tu negocio o proyecto. ¿Estás dedicándole el 80% de tu energía o te distraes con cosas menores?',
     personalExample:
-      'Si necesitas 1.500€/mes para vivir y ya generas 800€/mes con tu proyecto: te falta 700€ para dar el salto. Eso es un objetivo concreto, no una ilusión.',
+      '"La vida no se trata de ganar más, sino de saber cuándo has ganado lo suficiente." La libertad no es un número — es saber parar cuando has llegado.',
     challenge: {
-      title: 'Plan de Transición',
-      description: 'Escribe tu plan de 6 meses para generar ingresos propios antes de tomar una decisión de cambio.',
-      xp: 200,
+      title: 'El 80/20 de tu Negocio',
+      description: 'Lista todos los problemas de tu negocio. Identifica el 20% que causa el 80% del dolor. Dedica la próxima semana solo a esos.',
+      xp: 130,
+      duration: 'today',
+    },
+  },
+
+  // ─── JAVI ORTEGA ─────────────────────────────────────────────────────────────
+  {
+    id: 'nl_019',
+    title: 'Cómo crear vídeos que la gente quiere ver (no los que te gustan a ti)',
+    source: 'Javi Ortega',
+    category: 'creacion',
+    difficulty: 'easy',
+    xpReward: 110,
+    readTime: 3,
+    tags: ['video', 'contenido', 'cliente'],
+    summary:
+      'Olvídate de hacer vídeos que te gusten. Céntrate en lo que quiere TU PÚBLICO. Rompe el hielo antes de grabar — deja que la persona se familiarice contigo con la cámara en mano. Luego pasarás desapercibido.',
+    keyInsight:
+      '"La pregunta para negociar: ¿Qué tendría que pasar para que dijerais que este proyecto fue un éxito total?" Esta pregunta cambia toda la conversación con el cliente y alinea expectativas desde el principio.',
+    howToApply: [
+      'Antes de grabar: empatiza con el cliente. ¿Qué espera realmente de este vídeo?',
+      'Iluminación: si no puedes mover las luces, mueve al sujeto.',
+      'Enviar correo a posibles clientes: personaliza el mensaje, no te vendas al instante, muestra entusiasmo real.',
+      'Precio: dilo con naturalidad. Si dudas, el cliente también dudará. Da un rango en vez de número fijo.',
+    ],
+    dailyApplication:
+      'En tu próximo proyecto de contenido, antes de empezar pregúntate: "¿Esto lo hago porque me gusta a mí o porque realmente le sirve a mi audiencia?"',
+    personalExample:
+      '"El truco alemán: la comunicación del producto debe impactar mucho más. Es el mismo producto pero con un slogan más llamativo." La forma en que lo presentas vale tanto como lo que es.',
+    challenge: {
+      title: 'Pregunta de Éxito con tu Cliente',
+      description: 'La próxima vez que hables con un cliente o colaborador, haz esta pregunta: "¿Qué tendría que pasar para que dijerais que fue un éxito total?" Anota su respuesta.',
+      xp: 100,
       duration: 'this-week',
     },
   },
 
-  // ─── CREACIÓN DE CONTENIDO ───────────────────────────────────────────────────
+  // ─── GALICIAN INVESTOR ───────────────────────────────────────────────────────
   {
-    id: 'nl_021',
-    title: 'Zumitow: Construir una audiencia desde cero',
-    source: 'Zumitow',
-    category: 'creacion',
-    difficulty: 'medium',
-    xpReward: 140,
-    readTime: 4,
-    tags: ['audiencia', 'redes-sociales', 'consistencia'],
+    id: 'nl_020',
+    title: 'Cómo analizar una empresa en 30 minutos',
+    source: 'Galician Investor',
+    category: 'inversion',
+    difficulty: 'hard',
+    xpReward: 200,
+    readTime: 7,
+    tags: ['value-investing', 'análisis', 'moat'],
     summary:
-      'Construir una audiencia es un juego de largo plazo y consistencia. No de viralizaciones. La persona que publica 3 veces por semana durante 1 año siempre supera a la que publica 10 veces en un mes y luego desaparece.',
+      '6 preguntas en 5 minutos cada una: 1) ¿Entiendo el negocio? 2) ¿Hay problema estructural? 3) ¿Tiene histórico de creación de valor? 4) ¿Quién está detrás? 5) ¿Tiene moat (ventaja competitiva)? 6) ¿Hay algún red flag?',
     keyInsight:
-      '"Los primeros 100 posts son basura. Los siguientes 100 son aprendizaje. Los últimos 100 son lo que funciona." La mayoría abandona antes de llegar al punto de inflexión.',
+      '"Invierte en empresas de calidad: aquellas cuyo negocio es estable, que tienen margen para innovar o cuyo producto es bueno. No pienses tanto en baratas o en subidones." — Warren Buffett: conserva la estabilidad emocional.',
     howToApply: [
-      'Elige 1 o máximo 2 plataformas. Dominar una es mejor que ser mediocre en cinco.',
-      'Define tu nicho: cuanto más específico, más fácil conectar con tu audiencia ideal',
-      'Crea un calendario de contenido y trátalo como una cita de trabajo irrenunciable',
-      'Analiza tus 5 posts con más engagement. ¿Qué tienen en común? Crea más de eso.',
+      '¿Entiendo el negocio? Si no puedo explicarlo en 2 frases a un amigo: descartar o poner en espera.',
+      '¿Hay moat? ¿Por qué esta empresa es diferente? ¿Qué costaría copiarla y robarle clientes?',
+      '¿Quién manda? ¿Fundador o directiva alineada? ¿Tienen skin in the game o solo cobran bonus?',
+      '¿Red flag rápido? Escándalos, litigios, salidas de directivos, cuentas poco claras.',
     ],
     dailyApplication:
-      'Escribe hoy 5 ideas de contenido para esta semana. Elige la que más miedo te dé publicar y publícala primera.',
+      'Elige una empresa que ya conozcas como cliente. Aplica las 6 preguntas del framework. ¿La comprarías a precios actuales?',
     personalExample:
-      'Justin Welsh construyó 500.000 seguidores en LinkedIn publicando 1 post diario durante 2 años. Sin trucos. Sin viralización. Solo consistencia extrema.',
+      '"Para aprender a invertir bastan 2 cursos: cómo valorar una empresa y cómo pensar en los mercados. No hace falta un CI de 180. Basta con entender tu círculo de competencia."',
     challenge: {
-      title: 'Plan de Contenido de 30 Días',
-      description: 'Diseña un calendario con 12 publicaciones para los próximos 30 días. Tema, formato y fecha.',
-      xp: 160,
-      duration: 'today',
+      title: 'Analiza una Empresa en 30 Minutos',
+      description: 'Elige una empresa que uses en tu día a día. Aplica las 6 preguntas del framework de Galician Investor. ¿Pasaría el filtro?',
+      xp: 220,
+      duration: 'this-week',
     },
   },
+
+  // ─── ANIMATION MAGAZINE ──────────────────────────────────────────────────────
   {
-    id: 'nl_022',
-    title: 'Animation Magazine: Creatividad como negocio',
+    id: 'nl_021',
+    title: '11 consejos para una carrera larga en la industria creativa',
     source: 'Animation Magazine',
     category: 'creacion',
     difficulty: 'medium',
-    xpReward: 120,
-    readTime: 4,
-    tags: ['creatividad', 'diseño', 'monetización-creativa'],
+    xpReward: 140,
+    readTime: 5,
+    tags: ['creatividad', 'carrera', 'industria'],
     summary:
-      'El creativo del siglo XXI no elige entre arte y dinero. Aprende a monetizar su creatividad sin vender su alma. El diseño, la animación y el contenido visual son habilidades de alto valor de mercado.',
+      'Abre tu puerta: muestra tu trabajo en LinkedIn, Instagram, Vimeo. Encuentra tiempo para concentrarte (auriculares con cancelación de ruido, estado "tiempo de concentración"). No olvides descansos. Invierte en ergonomía. Prepárate para los ciclos de la industria.',
     keyInsight:
-      '"Los creativos que aprenden a vender se vuelven libres. Los que solo crean, dependen siempre de alguien que venda por ellos." Entender el negocio detrás del arte es la ventaja del creativo moderno.',
+      '"Creo que la diversión que te da crear se puede ver en el resultado final. Haz cosas que te gustaría ver y trata de ser tu propio público." La pasión genuina se nota y atrae.',
     howToApply: [
-      'Construye un portafolio online con tus mejores piezas. Behance, Dribbble o tu propia web.',
-      'Especialízate: "diseñador de packaging para marcas de lujo" cobra 3x más que "diseñador gráfico"',
-      'Aprende los básicos de pricing: tu precio = horas × tarifa horaria + valor percibido del resultado',
-      'Crea contenido mostrando tu proceso creativo. El "behind the scenes" atrae clientes mejor que las piezas acabadas.',
+      'LinkedIn es extremadamente útil. Si es posible, incluye una nota al agregar a alguien a tu red.',
+      'Concéntrate limitando acceso a internet y distracciones. Solo necesitas pocas horas de trabajo real al día.',
+      'Los comentarios no tienen por qué ser dolorosos. Si 2 personas coinciden en una nota: abórdala.',
+      'Prepárate financieramente para las recesiones de la industria. Ahorra lo suficiente para la próxima.',
     ],
     dailyApplication:
-      'Actualiza tu portafolio hoy con tu pieza más reciente. Si no tienes portafolio online, crea uno en Behance en 30 minutos.',
+      'Actualiza hoy tu portafolio o perfil en LinkedIn/Instagram/Behance con tu trabajo más reciente. Añade una nota sobre el proceso creativo.',
     personalExample:
-      'Un animador que documenta en TikTok cómo hace sus animaciones atrae más clientes que uno que solo muestra el resultado. El proceso genera confianza y contexto.',
+      '"No todas las tomas tienen que ser una obra maestra. Confía en el proceso y ten un buen flujo de trabajo que te permita desarrollar confianza en tus habilidades."',
     challenge: {
-      title: 'Portafolio Actualizado',
-      description: 'Sube tus 5 mejores trabajos a una plataforma online con descripción del proyecto y proceso.',
+      title: 'Actualiza tu Portafolio',
+      description: 'Añade tu mejor trabajo reciente a tu portafolio online con una descripción del proceso y lo que aprendiste haciéndolo.',
       xp: 130,
-      duration: 'this-week',
+      duration: 'today',
+    },
+  },
+
+  // ─── ANYELO RICO ─────────────────────────────────────────────────────────────
+  {
+    id: 'nl_022',
+    title: 'Cómo salir de pobre: la pregunta correcta',
+    source: 'Anyelo Rico',
+    category: 'finanzas',
+    difficulty: 'easy',
+    xpReward: 80,
+    readTime: 2,
+    tags: ['mentalidad', 'aprendizaje', 'salida'],
+    summary:
+      'La pregunta más poderosa para mejorar tu situación económica: "¿Dónde puedo aprender lo que necesito aprender para conseguir lo que quiero?" No es una pregunta de dinero — es una pregunta de conocimiento y acción.',
+    keyInsight:
+      'La diferencia entre quienes progresan y quienes no, no es el talento ni la suerte. Es saber hacerse la pregunta correcta y actuar sobre la respuesta. El aprendizaje dirigido al objetivo es la clave.',
+    howToApply: [
+      'Define con claridad qué quieres conseguir. Sé específico (no "ganar más" sino "ganar 3.000€/mes trabajando por cuenta propia").',
+      'Pregúntate: ¿qué conocimiento/habilidad me falta para llegar ahí?',
+      'Busca quién ya lo ha conseguido y aprende de su camino, no del camino genérico.',
+      'Actúa en las próximas 48 horas sobre la respuesta. El conocimiento sin acción es entretenimiento.',
+    ],
+    dailyApplication:
+      'Escribe ahora mismo: "Quiero [OBJETIVO]. Para eso necesito aprender [CONOCIMIENTO]. Lo aprenderé de [FUENTE] en los próximos [PLAZO]."',
+    personalExample:
+      'Pregunta aplicada: "Quiero vivir de mi negocio online. Para eso necesito aprender a conseguir clientes. Lo aprenderé viendo los casos de éxito de Emprende Aprendiendo y aplicando en los próximos 3 meses."',
+    challenge: {
+      title: 'La Pregunta Correcta',
+      description: 'Escribe tu objetivo más importante y completa: "Para conseguirlo necesito aprender ___. Esta semana daré este paso concreto: ___".',
+      xp: 70,
+      duration: 'today',
+    },
+  },
+
+  // ─── AUTONOMOS ───────────────────────────────────────────────────────────────
+  {
+    id: 'nl_023',
+    title: 'El secreto de Aquaservice: constancia en el foco',
+    source: 'Autonomos',
+    category: 'autonomo',
+    difficulty: 'easy',
+    xpReward: 100,
+    readTime: 3,
+    tags: ['foco', 'crecimiento-orgánico', 'constancia'],
+    summary:
+      'Aquaservice nunca se distrajo con fuegos artificiales. Creció de forma orgánica, ampliando delegaciones, cuidando su red y ofreciendo siempre un servicio impecable. Esa constancia en el foco es lo que los llevó de una idea rara en 1996 a facturar cientos de millones.',
+    keyInsight:
+      '"Lo importante para un negocio: es mejor el ingenio que los recursos. Cuando quieres emprender, analiza en tu sector qué te dará beneficio a largo plazo. Es mejor buscar calidad que cantidad para un trabajo más óptimo."',
+    howToApply: [
+      'Antes de ir a más, fortalece lo que ya te funciona. No abandones lo que da resultados.',
+      'No te distraigas con "fuegos artificiales": nuevas redes, nuevas herramientas, nuevas tendencias.',
+      'El crecimiento orgánico tarda más pero es más sólido. Cuida a los clientes actuales primero.',
+      'Foco constante en el servicio: cada interacción con el cliente es una oportunidad de retenerlo.',
+    ],
+    dailyApplication:
+      'Hoy identifica las 3 cosas en tu negocio que YA funcionan. ¿Estás dedicándoles suficiente energía o te distraes con lo nuevo?',
+    personalExample:
+      '"No inventes la necesidad — resuélvela mejor." Aquaservice no inventó el agua. Resolvió mejor la entrega. El diferenciador puede estar en la ejecución, no en la idea.',
+    challenge: {
+      title: 'Fortalecer lo que Funciona',
+      description: 'Identifica tu canal o producto que mejores resultados da. Define 3 acciones para mejorarlo aún más esta semana (antes de empezar algo nuevo).',
+      xp: 110,
+      duration: 'today',
+    },
+  },
+
+  // ─── ADRIA LOPEZ PASTOR ──────────────────────────────────────────────────────
+  {
+    id: 'nl_024',
+    title: 'La persuasión como herramienta de éxito',
+    source: 'Adria Lopez Pastor',
+    category: 'marketing',
+    difficulty: 'medium',
+    xpReward: 130,
+    readTime: 4,
+    tags: ['persuasión', 'ventas', 'comunicación'],
+    summary:
+      'La persuasión te lleva al éxito. No se trata de manipular — se trata de comunicar el valor de lo que haces de forma que resuene con quien lo recibe. El ajo envuelto en jamón: primero das lo que quieren, luego lo que necesitan.',
+    keyInsight:
+      '"Tu marketing es el jamón, tu producto es el ajo. A la gente no le interesa mejorar su mentalidad (ajo). Quieren multiplicar sus ventas o ganar sus primeros 1.000€ online (jamón). Primero da lo que quieren. Después, lo que necesitan."',
+    howToApply: [
+      'Construye una narrativa poderosa: conecta tu producto con emociones, no solo con características.',
+      'Crea hábitos o tradiciones alrededor de tu producto para generar clientes recurrentes.',
+      'No apuntes a la luna — ve a las estrellas. El 99% se conforma con ser mediocre porque cree que es incapaz de más.',
+      '"Vender no es hablar de ti sino de los resultados del cliente." Ve a las emociones primero, luego a la razón.',
+    ],
+    dailyApplication:
+      'Reescribe el mensaje principal de tu oferta usando el framework "jamón-ajo": ¿qué quiere el cliente (jamón)? ¿Qué necesita realmente (ajo)?',
+    personalExample:
+      '"No se trata de vender caro, sino de hacer sentir que vale la pena pagar más." El precio percibido no viene del coste — viene de la historia que cuentas.',
+    challenge: {
+      title: 'Reescribe con la Fórmula Jamón-Ajo',
+      description: 'Escribe el mensaje de venta de tu producto/servicio usando: JAMÓN (lo que el cliente quiere conseguir) + AJO (la forma en que lo consigue con tu ayuda).',
+      xp: 140,
+      duration: 'today',
     },
   },
 ];
@@ -746,11 +819,9 @@ export const NEWSLETTERS = [
 export const getByCategory = (categoryId) =>
   NEWSLETTERS.filter((n) => n.category === categoryId);
 
-// Get a random newsletter
 export const getRandom = () =>
   NEWSLETTERS[Math.floor(Math.random() * NEWSLETTERS.length)];
 
-// Get daily featured (changes each day based on date)
 export const getDailyFeatured = () => {
   const dayOfYear = Math.floor(
     (new Date() - new Date(new Date().getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
