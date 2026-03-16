@@ -18,11 +18,12 @@ const FILTER_OPTIONS = [
   { id: 'all', label: '🎮 Todos' },
   { id: 'pending', label: '⏳ Pendientes' },
   { id: 'completed', label: '✅ Completados' },
-  { id: 'productivity', label: '⚡ Productividad' },
-  { id: 'mindset', label: '🧠 Mentalidad' },
-  { id: 'habits', label: '🔄 Hábitos' },
-  { id: 'health', label: '🏃 Salud' },
-  { id: 'focus', label: '🎯 Enfoque' },
+  { id: 'inversion', label: '📈 Inversión' },
+  { id: 'crypto', label: '₿ Crypto' },
+  { id: 'emprendimiento', label: '🚀 Emprender' },
+  { id: 'marketing', label: '📣 Marketing' },
+  { id: 'finanzas', label: '💰 Finanzas' },
+  { id: 'autonomo', label: '💼 Autónomo' },
 ];
 
 export default function ChallengesScreen() {
@@ -40,7 +41,7 @@ export default function ChallengesScreen() {
   const filteredChallenges = DAILY_CHALLENGES.filter((c) => {
     if (filter === 'completed') return completedChallenges.includes(c.id);
     if (filter === 'pending') return !completedChallenges.includes(c.id);
-    if (['productivity', 'mindset', 'habits', 'health', 'focus', 'learning', 'relationships', 'finance'].includes(filter)) {
+    if (['inversion', 'crypto', 'emprendimiento', 'marketing', 'finanzas', 'libros', 'autonomo', 'creacion'].includes(filter)) {
       return c.category === filter;
     }
     return true;

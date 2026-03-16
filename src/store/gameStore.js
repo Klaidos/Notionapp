@@ -17,14 +17,14 @@ const defaultState = {
 
   // Category progress
   categoryProgress: {
-    productivity: 0,
-    mindset: 0,
-    habits: 0,
-    finance: 0,
-    health: 0,
-    learning: 0,
-    focus: 0,
-    relationships: 0,
+    inversion: 0,
+    crypto: 0,
+    emprendimiento: 0,
+    marketing: 0,
+    finanzas: 0,
+    libros: 0,
+    autonomo: 0,
+    creacion: 0,
   },
 
   // Settings
@@ -131,11 +131,13 @@ const useGameStore = create((set, get) => ({
     const categoryCount = state.completedChallenges.filter((id) =>
       id.startsWith(category)
     ).length;
-    if (categoryCount + 1 >= 5) {
+    if (categoryCount + 1 >= 3) {
       const badgeMap = {
-        productivity: 'productivity_master',
-        mindset: 'mindset_warrior',
-        habits: 'habit_builder',
+        inversion: 'inversor',
+        crypto: 'crypto_nerd',
+        emprendimiento: 'emprendedor',
+        marketing: 'growth_hacker',
+        autonomo: 'autonomo_pro',
       };
       if (badgeMap[category]) newBadges.push(badgeMap[category]);
     }
@@ -160,8 +162,8 @@ const useGameStore = create((set, get) => ({
       set({ completedNewsletters: newList });
 
       // Unlock reader badge at 10 newsletters
-      if (newList.length >= 10 && !state.unlockedBadges.includes('reader_100')) {
-        set({ unlockedBadges: [...state.unlockedBadges, 'reader_100'] });
+      if (newList.length >= 10 && !state.unlockedBadges.includes('reader_10')) {
+        set({ unlockedBadges: [...state.unlockedBadges, 'reader_10'] });
       }
 
       await get().saveState();
