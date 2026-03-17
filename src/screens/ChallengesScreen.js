@@ -34,7 +34,6 @@ export default function ChallengesScreen() {
   const completedChallenges = useGameStore((s) => s.completedChallenges);
   const totalChallenges = useGameStore((s) => s.totalChallengesCompleted);
   const streak = useGameStore((s) => s.streak);
-  const getLevel = useGameStore((s) => s.getLevel);
 
   const dailyChallenge = getDailyChallenge();
 
@@ -51,7 +50,7 @@ export default function ChallengesScreen() {
     if (result) {
       setLevelUpData({
         xpGained,
-        level: result.leveledUp ? getLevel() : null,
+        level: result.leveledUp ? result.newLevel : null,
         newBadges: result.newBadges || [],
       });
     }

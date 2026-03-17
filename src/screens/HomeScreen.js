@@ -45,7 +45,7 @@ export default function HomeScreen({ navigation }) {
     if (result) {
       setLevelUpData({
         xpGained,
-        level: result.leveledUp ? getLevel() : null,
+        level: result.leveledUp ? result.newLevel : null,
         newBadges: result.newBadges || [],
       });
     }

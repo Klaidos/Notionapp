@@ -28,11 +28,16 @@ export function ChallengeCard({ challenge, featured = false, onComplete }) {
   const handleComplete = async () => {
     if (isCompleted) return;
 
-    const result = await completeChallenge(challenge.id, challenge.category);
-    await addXP(challenge.xpReward, challenge.category);
+    const challengeResult = await completeChallenge(challenge.id, challenge.category);
+    const xpResult = await addXP(challenge.xpReward, challenge.category);
 
     setModalVisible(false);
-    if (onComplete) onComplete(result, challenge.xpReward);
+    if (onComplete) {
+      onComplete(
+        { ...challengeResult, leveledUp: xpResult?.leveledUp, newLevel: xpResult?.newLevel },
+        challenge.xpReward
+      );
+    }
   };
 
   return (

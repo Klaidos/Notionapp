@@ -111,9 +111,14 @@ const useGameStore = create((set, get) => ({
     if (state.completedChallenges.includes(challengeId)) return null;
 
     const today = new Date().toDateString();
+    const alreadyPlayedToday = state.lastPlayedDate === today;
     const wasPlayedYesterday =
       state.lastPlayedDate === new Date(Date.now() - 86400000).toDateString();
-    const newStreak = wasPlayedYesterday ? state.streak + 1 : 1;
+    const newStreak = alreadyPlayedToday
+      ? state.streak
+      : wasPlayedYesterday
+      ? state.streak + 1
+      : 1;
 
     const newBadges = [];
 

@@ -1,4 +1,5 @@
 // Daily Challenges & Gamification Data
+export { CATEGORIES } from './newsletters';
 
 export const DIFFICULTY_CONFIG = {
   easy: { label: 'Fácil', color: '#10B981', xpMultiplier: 1, emoji: '🟢' },

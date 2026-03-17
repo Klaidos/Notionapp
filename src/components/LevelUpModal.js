@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Modal, View, Text, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import { COLORS, SPACING, RADIUS, SHADOWS } from '../utils/theme';
+import { BADGES } from '../data/challenges';
 
 export default function LevelUpModal({ visible, level, xpGained, newBadges = [], onClose }) {
   const scaleAnim = useRef(new Animated.Value(0)).current;
@@ -57,12 +58,15 @@ export default function LevelUpModal({ visible, level, xpGained, newBadges = [],
           {newBadges.length > 0 && (
             <View style={styles.badgesSection}>
               <Text style={styles.badgesTitle}>🏅 Insignias Desbloqueadas</Text>
-              {newBadges.map((badge) => (
-                <View key={badge} style={styles.badgeRow}>
-                  <Text style={styles.badgeEmoji}>🏆</Text>
-                  <Text style={styles.badgeName}>{badge}</Text>
-                </View>
-              ))}
+              {newBadges.map((badgeId) => {
+                const badge = BADGES.find((b) => b.id === badgeId);
+                return (
+                  <View key={badgeId} style={styles.badgeRow}>
+                    <Text style={styles.badgeEmoji}>{badge?.emoji || '🏆'}</Text>
+                    <Text style={styles.badgeName}>{badge?.name || badgeId}</Text>
+                  </View>
+                );
+              })}
             </View>
           )}
 
