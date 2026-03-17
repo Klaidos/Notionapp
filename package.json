@@ -29,5 +29,13 @@
     "react-native-svg": "^15.11.2",
     "zustand": "^5.0.12"
   },
-  "private": true
+  "private": true,
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": ["react-native-progress"],
+        "listUnknownPackages": false
+      }
+    }
+  }
 }
