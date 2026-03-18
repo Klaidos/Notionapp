@@ -28,6 +28,12 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": ["react-native-progress"],
+        "listUnknownPackages": false
+      }
+    },
     "plugins": [
       [
         "expo-build-properties",

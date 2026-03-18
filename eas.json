@@ -4,11 +4,17 @@
   },
   "build": {
     "preview": {
+      "cache": {
+        "disabled": true
+      },
       "android": {
         "buildType": "apk"
       }
     },
     "production": {
+      "cache": {
+        "disabled": true
+      },
       "android": {
         "buildType": "app-bundle"
       }
