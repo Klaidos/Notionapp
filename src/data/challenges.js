@@ -35,7 +35,10 @@ export const BADGES = [
   { id: 'level_5', name: 'Estratega', description: 'Alcanza el nivel 5', emoji: '♟️', xpNeeded: 1800 },
   { id: 'level_10', name: 'Iluminado', description: 'Alcanza el nivel 10', emoji: '🌟', xpNeeded: 20000 },
   { id: 'reader_10', name: 'Lector Voraz', description: 'Lee 10 newsletters completos', emoji: '📚', xpNeeded: 0 },
-  { id: 'autonomo_pro', name: 'Autónomo Pro', description: 'Completa 2 retos de autónomo', emoji: '💼', xpNeeded: 0 },
+  { id: 'autonomo_pro', name: 'Autónomo Pro', description: 'Completa 3 retos de autónomo', emoji: '💼', xpNeeded: 0 },
+  { id: 'finanzas_pro', name: 'Finanzas Pro', description: 'Completa 3 retos de finanzas', emoji: '💰', xpNeeded: 0 },
+  { id: 'lector_pro', name: 'Lector Pro', description: 'Completa 3 retos de libros', emoji: '📖', xpNeeded: 0 },
+  { id: 'creador_pro', name: 'Creador Pro', description: 'Completa 3 retos de creación', emoji: '🎨', xpNeeded: 0 },
 ];
 
 // Daily challenge pool — basado en el contenido REAL de los newsletters del usuario
