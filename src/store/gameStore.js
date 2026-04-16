@@ -143,6 +143,9 @@ const useGameStore = create((set, get) => ({
         emprendimiento: 'emprendedor',
         marketing: 'growth_hacker',
         autonomo: 'autonomo_pro',
+        finanzas: 'finanzas_pro',
+        libros: 'lector_pro',
+        creacion: 'creador_pro',
       };
       if (badgeMap[category]) newBadges.push(badgeMap[category]);
     }
