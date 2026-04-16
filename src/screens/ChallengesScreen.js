@@ -23,7 +23,9 @@ const FILTER_OPTIONS = [
   { id: 'emprendimiento', label: '🚀 Emprender' },
   { id: 'marketing', label: '📣 Marketing' },
   { id: 'finanzas', label: '💰 Finanzas' },
+  { id: 'libros', label: '📚 Libros' },
   { id: 'autonomo', label: '💼 Autónomo' },
+  { id: 'creacion', label: '🎨 Creación' },
 ];
 
 export default function ChallengesScreen() {
