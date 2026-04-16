@@ -155,6 +155,15 @@ export default function LibraryScreen({ navigation, route }) {
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.list}
         showsVerticalScrollIndicator={false}
+        initialNumToRender={10}
+        maxToRenderPerBatch={10}
+        windowSize={5}
+        removeClippedSubviews={true}
+        getItemLayout={(data, index) => ({
+          length: 140,
+          offset: 140 * index,
+          index,
+        })}
         renderItem={({ item }) => (
           <NewsletterCard
             newsletter={item}
