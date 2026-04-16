@@ -5337,6 +5337,26 @@ export const NEWSLETTERS = [
 
 ];
 
+// ── Utility Functions ───────────────────────────────────────────────
+
+export const getTotalNewsletters = () => NEWSLETTERS.length;
+
+export const getDailyFeatured = () => {
+  const dayOfYear = Math.floor(
+    (new Date() - new Date(new Date().getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
+  );
+  return NEWSLETTERS[dayOfYear % NEWSLETTERS.length];
+};
+
+export const getNewslettersByCategory = (categoryId) =>
+  NEWSLETTERS.filter((n) => n.category === categoryId);
+
+export const getNewslettersBySource = (source) =>
+  NEWSLETTERS.filter((n) => n.source === source);
+
+export const getAllSources = () =>
+  [...new Set(NEWSLETTERS.map((n) => n.source))].sort();
+
 // ── Statistics ──────────────────────────────────────────────────────
 // Total entries: 329
 // Sources: 26 newsletters
