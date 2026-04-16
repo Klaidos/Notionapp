@@ -10,7 +10,7 @@ import { COLORS, SPACING, RADIUS, SHADOWS } from '../utils/theme';
 import { CATEGORIES, DIFFICULTY_CONFIG } from '../data/challenges';
 import useGameStore from '../store/gameStore';
 
-export function NewsletterCard({ newsletter, onPress, compact = false }) {
+export const NewsletterCard = React.memo(function NewsletterCard({ newsletter, onPress, compact = false }) {
   const isRead = useGameStore((s) => s.isNewsletterRead(newsletter.id));
   const category = CATEGORIES[newsletter.category.toUpperCase()];
   const diff = DIFFICULTY_CONFIG[newsletter.difficulty];
@@ -79,7 +79,7 @@ export function NewsletterCard({ newsletter, onPress, compact = false }) {
       </View>
     </TouchableOpacity>
   );
-}
+});
 
 export function NewsletterDetail({ newsletter, onClose }) {
   const markRead = useGameStore((s) => s.markNewsletterRead);
