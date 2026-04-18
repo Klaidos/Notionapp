@@ -7,7 +7,7 @@
   "android": "expo start --android",
   "ios": "expo start --ios",
   "web": "expo start --web",
-  "postinstall": "node -e \"const fs=require('fs');const f='node_modules/expo-asset/android/src/main/java/expo/modules/asset/AssetModule.kt';if(fs.existsSync(f)){let c=fs.readFileSync(f,'utf8');c=c.replace('appContext.reactContext','appContext.reactContext!!');fs.writeFileSync(f,c)}\""
+  "postinstall": "node fix-expo-asset.js"
 },
   "dependencies": {
     "@expo/vector-icons": "^15.1.1",
