@@ -2,13 +2,14 @@
   "name": "notionapp",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "start": "expo start",
-  "android": "expo start --android",
-  "ios": "expo start --ios",
-  "web": "expo start --web",
-  "postinstall": "node fix-expo-asset.js"
-},
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "postinstall": "node fix-expo-asset.js",
+    "eas-build-post-install": "node fix-expo-asset.js"
+  },
   "dependencies": {
     "@expo/vector-icons": "^15.1.1",
     "@react-native-async-storage/async-storage": "2.2.0",
