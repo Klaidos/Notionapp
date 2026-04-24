@@ -10,10 +10,72 @@ import { COLORS, SPACING, RADIUS, SHADOWS } from '../utils/theme';
 import { CATEGORIES, DIFFICULTY_CONFIG } from '../data/challenges';
 import useGameStore from '../store/gameStore';
 
+// ── Markdown cleanup ──────────────────────────────────────────────────────────
+function cleanMarkdown(text) {
+  if (!text) return '';
+  return text
+    .replace(/^#{1,6}\s*/gm, '')            // remove # headings
+    .replace(/^[-*]\s*\[[ xX]\]\s*/gm, '')  // remove task list markers - [ ]
+    .replace(/^\s*[•·▪]\s*/gm, '')          // remove bullet points
+    .replace(/^\s*\d+[.)]\s+/gm, '')        // remove numbered lists
+    .replace(/\*\*(.*?)\*\*/g, '$1')        // remove **bold**
+    .replace(/\*(.*?)\*/g, '$1')            // remove *italic*
+    .replace(/`(.*?)`/g, '$1')             // remove `code`
+    .replace(/\t/g, ' ')                    // tabs → space
+    .replace(/\n{3,}/g, '\n\n')            // collapse extra newlines
+    .trim();
+}
+
+// Pick a real insight: skip generic headers, fall back to first howToApply step
+function resolveKeyInsight(newsletter) {
+  const raw = newsletter.keyInsight || '';
+  const cleaned = cleanMarkdown(raw);
+
+  const isGenericHeader =
+    !cleaned ||
+    /^conceptos principales/i.test(cleaned) ||
+    /^lo que aprend/i.test(cleaned) ||
+    /^apuntes/i.test(cleaned) ||
+    /^resumen/i.test(cleaned) ||
+    cleaned.length < 20;
+
+  if (isGenericHeader) {
+    // Use the first real howToApply point as the key insight
+    const firstStep = newsletter.howToApply?.[0];
+    if (firstStep) return cleanMarkdown(firstStep);
+    // Last resort: first sentence of summary
+    const summaryClean = cleanMarkdown(newsletter.summary || '');
+    const firstSentence = summaryClean.split(/[.!?]\s/)[0];
+    return firstSentence || summaryClean;
+  }
+
+  return cleaned;
+}
+
+function resolveDailyApplication(newsletter) {
+  const da = newsletter.dailyApplication;
+  if (da && da.trim().length > 5) return cleanMarkdown(da);
+  // Use the last howToApply step as the "today task"
+  const steps = newsletter.howToApply || [];
+  if (steps.length > 0) {
+    return `Haz esto hoy: ${cleanMarkdown(steps[steps.length - 1])}`;
+  }
+  return 'Elige una idea de este artículo y aplícala antes de que acabe el día.';
+}
+
+function resolvePersonalExample(newsletter) {
+  const pe = newsletter.personalExample;
+  if (pe && pe.trim().length > 5) return cleanMarkdown(pe);
+  const insight = resolveKeyInsight(newsletter);
+  return `Pregúntate: ¿cómo aplica esto a tu situación? Idea clave que puedes usar: "${insight.substring(0, 80)}${insight.length > 80 ? '…' : ''}"`;
+}
+
+// ── NewsletterCard ────────────────────────────────────────────────────────────
 export const NewsletterCard = React.memo(function NewsletterCard({ newsletter, onPress, compact = false }) {
   const isRead = useGameStore((s) => s.isNewsletterRead(newsletter.id));
   const category = CATEGORIES[newsletter.category.toUpperCase()];
   const diff = DIFFICULTY_CONFIG[newsletter.difficulty];
+  const cleanSummary = cleanMarkdown(newsletter.summary);
 
   if (compact) {
     return (
@@ -61,7 +123,7 @@ export const NewsletterCard = React.memo(function NewsletterCard({ newsletter, o
       <Text style={styles.title}>{newsletter.title}</Text>
       <Text style={styles.source}>{newsletter.source}</Text>
       <Text style={styles.summary} numberOfLines={3}>
-        {newsletter.summary}
+        {cleanSummary}
       </Text>
 
       <View style={styles.footer}>
@@ -81,11 +143,17 @@ export const NewsletterCard = React.memo(function NewsletterCard({ newsletter, o
   );
 });
 
+// ── NewsletterDetail ──────────────────────────────────────────────────────────
 export function NewsletterDetail({ newsletter, onClose }) {
   const markRead = useGameStore((s) => s.markNewsletterRead);
   const addXP = useGameStore((s) => s.addXP);
   const isRead = useGameStore((s) => s.isNewsletterRead(newsletter.id));
   const category = CATEGORIES[newsletter.category.toUpperCase()];
+
+  const cleanSummary = cleanMarkdown(newsletter.summary);
+  const keyInsight = resolveKeyInsight(newsletter);
+  const dailyApplication = resolveDailyApplication(newsletter);
+  const personalExample = resolvePersonalExample(newsletter);
 
   const handleMarkRead = async () => {
     if (!isRead) {
@@ -108,24 +176,24 @@ export function NewsletterDetail({ newsletter, onClose }) {
 
       {/* Summary */}
       <Section title="💡 Resumen" color={COLORS.info}>
-        <Text style={styles.bodyText}>{newsletter.summary}</Text>
+        <Text style={styles.bodyText}>{cleanSummary}</Text>
       </Section>
 
       {/* Key Insight */}
       <Section title="🔑 Insight Clave" color={COLORS.accent}>
         <View style={styles.insightBox}>
-          <Text style={styles.insightText}>"{newsletter.keyInsight}"</Text>
+          <Text style={styles.insightText}>"{keyInsight}"</Text>
         </View>
       </Section>
 
       {/* How to Apply */}
       <Section title="🛠️ Cómo Aplicarlo" color={COLORS.success}>
-        {newsletter.howToApply.map((step, i) => (
+        {(newsletter.howToApply || []).map((step, i) => (
           <View key={i} style={styles.stepRow}>
             <View style={styles.stepNumber}>
               <Text style={styles.stepNumberText}>{i + 1}</Text>
             </View>
-            <Text style={styles.stepText}>{step}</Text>
+            <Text style={styles.stepText}>{cleanMarkdown(step)}</Text>
           </View>
         ))}
       </Section>
@@ -133,13 +201,15 @@ export function NewsletterDetail({ newsletter, onClose }) {
       {/* Daily Application */}
       <Section title="📅 Aplícalo Hoy" color={COLORS.primary}>
         <View style={styles.todayBox}>
-          <Text style={styles.todayText}>{newsletter.dailyApplication}</Text>
+          <Text style={styles.todayText}>{dailyApplication}</Text>
         </View>
       </Section>
 
       {/* Personal Example */}
       <Section title="👤 Ejemplo Personal" color={COLORS.relationships}>
-        <Text style={styles.bodyText}>{newsletter.personalExample}</Text>
+        <View style={styles.personalBox}>
+          <Text style={styles.personalText}>{personalExample}</Text>
+        </View>
       </Section>
 
       {/* Challenge */}
@@ -169,7 +239,9 @@ export function NewsletterDetail({ newsletter, onClose }) {
         activeOpacity={0.8}
       >
         <Text style={styles.readButtonText}>
-          {isRead ? '✓ Ya leíste esto • +' + newsletter.xpReward + ' XP ganados' : '✅ Marcar como leído • +' + newsletter.xpReward + ' XP'}
+          {isRead
+            ? '✓ Ya leíste esto • +' + newsletter.xpReward + ' XP ganados'
+            : '✅ Marcar como leído • +' + newsletter.xpReward + ' XP'}
         </Text>
       </TouchableOpacity>
     </ScrollView>
@@ -291,7 +363,7 @@ const styles = StyleSheet.create({
   },
   sectionLine: { position: 'absolute', left: 0, top: 0, bottom: 0, width: 3, borderRadius: 2 },
   sectionTitle: { fontSize: 14, fontWeight: '700', marginBottom: SPACING.sm },
-  bodyText: { color: COLORS.textSecondary, fontSize: 15, lineHeight: 22 },
+  bodyText: { color: COLORS.textSecondary, fontSize: 15, lineHeight: 24 },
   insightBox: {
     backgroundColor: COLORS.accent + '15',
     borderRadius: RADIUS.md,
@@ -318,6 +390,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.success + '20',
     alignItems: 'center',
     justifyContent: 'center',
+    flexShrink: 0,
   },
   stepNumberText: { color: COLORS.success, fontSize: 12, fontWeight: '700' },
   stepText: { color: COLORS.textSecondary, fontSize: 14, flex: 1, lineHeight: 20 },
@@ -325,8 +398,18 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primary + '15',
     borderRadius: RADIUS.md,
     padding: SPACING.md,
+    borderWidth: 1,
+    borderColor: COLORS.primary + '30',
   },
   todayText: { color: COLORS.primaryLight, fontSize: 15, lineHeight: 22 },
+  personalBox: {
+    backgroundColor: COLORS.relationships + '12',
+    borderRadius: RADIUS.md,
+    padding: SPACING.md,
+    borderWidth: 1,
+    borderColor: COLORS.relationships + '30',
+  },
+  personalText: { color: '#F9A8D4', fontSize: 15, lineHeight: 22 },
   challengeBox: {
     backgroundColor: COLORS.accent + '10',
     borderRadius: RADIUS.md,

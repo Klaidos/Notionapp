@@ -103,28 +103,33 @@ export default function LibraryScreen({ navigation, route }) {
         keyExtractor={(item) => item.id}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.filtersContainer}
-        renderItem={({ item }) => (
-          <TouchableOpacity
-            style={[
-              styles.filterChip,
-              selectedCategory === item.id && {
-                backgroundColor: item.color + '20',
-                borderColor: item.color,
-              },
-            ]}
-            onPress={() => setSelectedCategory(item.id)}
-          >
-            <Text style={styles.filterEmoji}>{item.emoji}</Text>
-            <Text
+        renderItem={({ item }) => {
+          const isActive = selectedCategory === item.id;
+          return (
+            <TouchableOpacity
               style={[
-                styles.filterText,
-                selectedCategory === item.id && { color: item.color, fontWeight: '700' },
+                styles.filterChip,
+                isActive
+                  ? { backgroundColor: item.color + '25', borderColor: item.color, borderWidth: 1.5 }
+                  : styles.filterChipInactive,
               ]}
+              onPress={() => setSelectedCategory(item.id)}
+              activeOpacity={0.7}
             >
-              {item.name}
-            </Text>
-          </TouchableOpacity>
-        )}
+              <Text style={[styles.filterEmoji, isActive && styles.filterEmojiActive]}>
+                {item.emoji}
+              </Text>
+              <Text
+                style={[
+                  styles.filterText,
+                  isActive && { color: item.color, fontWeight: '700' },
+                ]}
+              >
+                {item.name}
+              </Text>
+            </TouchableOpacity>
+          );
+        }}
       />
 
       {/* Sort Options */}
@@ -247,17 +252,20 @@ const styles = StyleSheet.create({
   filterChip: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: SPACING.sm,
+    paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: RADIUS.full,
-    backgroundColor: COLORS.bgCard,
-    borderWidth: 1,
-    borderColor: COLORS.border,
-    gap: 4,
+    borderWidth: 1.5,
+    gap: 5,
     marginRight: SPACING.xs,
   },
-  filterEmoji: { fontSize: 14 },
-  filterText: { color: COLORS.textSecondary, fontSize: 13 },
+  filterChipInactive: {
+    backgroundColor: COLORS.bgSurface,
+    borderColor: COLORS.borderLight,
+  },
+  filterEmoji: { fontSize: 15, opacity: 0.7 },
+  filterEmojiActive: { opacity: 1 },
+  filterText: { color: COLORS.textSecondary, fontSize: 13, fontWeight: '500' },
   sortRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',

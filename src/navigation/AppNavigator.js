@@ -20,14 +20,16 @@ function TabIcon({ emoji, label, focused }) {
   return (
     <View style={[styles.tabItem, focused && styles.tabItemFocused]}>
       <Text style={[styles.tabEmoji, focused && styles.tabEmojiFocused]}>{emoji}</Text>
-      <Text style={[styles.tabLabel, focused && styles.tabLabelFocused]}>{label}</Text>
+      <Text style={[styles.tabLabel, focused && styles.tabLabelFocused]} numberOfLines={1}>
+        {label}
+      </Text>
     </View>
   );
 }
 
 function MainTabs() {
-  const totalChallenges = useGameStore((s) => s.totalChallengesCompleted);
-  const streak = useGameStore((s) => s.streak);
+  useGameStore((s) => s.totalChallengesCompleted);
+  useGameStore((s) => s.streak);
 
   return (
     <Tab.Navigator
@@ -61,7 +63,7 @@ function MainTabs() {
         component={LibraryScreen}
         options={{
           tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="📚" label="Biblioteca" focused={focused} />
+            <TabIcon emoji="📚" label="Libros" focused={focused} />
           ),
         }}
       />
@@ -110,28 +112,34 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.bgCard,
     borderTopWidth: 1,
     borderTopColor: COLORS.border,
-    height: 70,
-    paddingBottom: 8,
+    height: 72,
+    paddingBottom: 10,
     paddingTop: 8,
   },
   tabItem: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 12,
+    paddingHorizontal: 10,
     paddingVertical: 6,
     borderRadius: RADIUS.md,
-    minWidth: 60,
+    minWidth: 64,
+    gap: 3,
   },
   tabItemFocused: {
-    backgroundColor: COLORS.primary + '20',
+    backgroundColor: COLORS.primary + '25',
   },
-  tabEmoji: { fontSize: 22, opacity: 0.5 },
-  tabEmojiFocused: { opacity: 1 },
+  tabEmoji: {
+    fontSize: 22,
+    opacity: 0.45,
+  },
+  tabEmojiFocused: {
+    opacity: 1,
+  },
   tabLabel: {
     color: COLORS.textMuted,
-    fontSize: 10,
-    marginTop: 2,
+    fontSize: 11,
     fontWeight: '500',
+    letterSpacing: 0.2,
   },
   tabLabelFocused: {
     color: COLORS.primaryLight,
